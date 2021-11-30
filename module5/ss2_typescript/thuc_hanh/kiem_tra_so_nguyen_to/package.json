@@ -1,0 +1,7 @@
+{
+  "name": "kiem_tra_so_nguyen_to",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
+}

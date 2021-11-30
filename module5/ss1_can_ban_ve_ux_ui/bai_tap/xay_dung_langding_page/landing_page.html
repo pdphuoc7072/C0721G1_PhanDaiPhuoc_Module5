@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+    <!--            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
+    <!--            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+    <!--            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
+    <!--            crossorigin="anonymous"></script>-->
+
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="landing_page.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="images/codegym-vietnam-vhpegrcrp-avatar.png" width="50" height="50" class="d-inline-block align-top"
+             alt="">
+        CODEGYM
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="Computers" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Khóa học
+                </a>
+                <div class="dropdown-menu" aria-labelledby="Computers">
+                    <a class="dropdown-item" href="#">Người mới bắt đầu</a>
+                    <a class="dropdown-item" href="#">Người đã biết lập trình</a>
+                    <a class="dropdown-item" href="#">Lịch khai giảng</a>
+                    <a class="dropdown-item" href="#">Khóa học từ xa</a>
+                    <a class="dropdown-item" href="#">Khóa học miễn phí</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="Computers for Business" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Trung tâm
+                </a>
+                <div class="dropdown-menu" aria-labelledby="Computers for Business">
+                    <a class="dropdown-item" href="#">CODEGYM MON CITY, HÀ NỘI</a>
+                    <a class="dropdown-item" href="#">CODEGYM HUẾ</a>
+                    <a class="dropdown-item" href="#">CODEGYM ĐÀ NẴNG</a>
+                    <a class="dropdown-item" href="#">CODEGYM VIỆT TRÌ</a>
+                    <a class="dropdown-item" href="#">CODEGYM QUẢNG TRỊ</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="Accessories" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="Accessories">
+                    <a class="dropdown-item" href="#">Bài viết chuyên môn</a>
+                    <a class="dropdown-item" href="#">Sách học nghề</a>
+                    <a class="dropdown-item" href="#">Sách thợ lành nghề</a>
+                    <a class="dropdown-item" href="#">Bài giảng lập trình</a>
+                    <a class="dropdown-item" href="#">Bài thực hành</a>
+                    <a class="dropdown-item" href="#">Cẩm nang lập trình</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="Shop now" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tin tức
+                </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="Support" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Giới thiệu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="Support">
+                    <a class="dropdown-item" href="#">Giới thiệu CODEGYM</a>
+                    <a class="dropdown-item" href="#">Mô hình Coding Bootcamp</a>
+                    <a class="dropdown-item" href="#">Học viên CODEGYM</a>
+                    <a class="dropdown-item" href="#">Cộng đồng CODEGYM</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <img src="images/2.jpg" alt="" width="100%">
+    <div class="text mt-3">
+        <h2 style="text-align: center">TỔNG QUAN CHƯƠNG TRÌNH</h2>
+        <p style="text-align: justify">
+            Chương trình CodeGym Career tại CodeGym cung cấp giải pháp đào tạo lập trình viên chuyên nghiệp, huấn luyện
+            thực chiến trong thời gian ngắn, thực hành liên tục và cường độ cao. Học viên sẽ thành thạo các kỹ thuật lập
+            trình với các ngôn ngữ JavaScript, Java, PHP và Typescript, tham gia vào các nhóm dự án theo mô hình Scrum
+            và sử dụng các kỹ thuật Agile thông dụng. Hoàn thành chương trình, học viên CodeGym có thể đảm nhận ngay vị
+            trí lập trình viên full-stack tại các công ty.
+        </p>
+    </div>
+</div>
+
+
+<section id="PCs" class="container-fluid bg-light mt-4">
+    <h2 style="text-align: center">TRỞ THÀNH LẬP TRÌNH VIÊN FULL-STACK CHỈ SAU 20 TUẦN</h2>
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/3.jpg" alt="Surface-Pro-8" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Sự nghiệp bắt đầu ngay từ ngày đầu tiên</h4>
+                    <p class="card-text">
+                        Sự nghiệp trở thành lập trình viên full-stack sẽ bắt đầu ngay từ ngày đầu tiên. Học viên giống
+                        như là nhân viên tập sự tại CodeGym, tuân thủ các quy định về kỷ luật và văn hoá của CodeGym.
+                        Trong vòng 20 tuần, CodeGym giúp bạn trở thành lập trình viên có đầy đủ các kỹ năng quan trọng
+                        để phát triển sự nghiệp lâu dài.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/4.jpg" alt="Surface-Pro-X" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Bạn nhận được tương ứng những gì bạn bỏ ra</h4>
+                    <p class="card-text">
+                        Để đạt được mục tiêu, học viên CodeGym được kỳ vọng dành ít nhất 70h mỗi tuần cho chương trình.
+                        Các học viên thành công nhất thường dành tới 90h/tuần. Học viên của CodeGym thường nói rằng,
+                        chương trình Coding Bootcamp là điều khó khăn nhất nhưng đáng giá nhất mà họ từng thực hiện.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/5.jpg" alt="Surface-Go-3" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Trải nghiệm doanh nghiệp</h4>
+                    <p class="card-text">
+                        Chương trình của CodeGym được thiết kế cô đọng và chọn lọc các nội dung thiết yếu, đáp ứng yêu
+                        cầu của doanh nghiệp. CodeGym tổ chức thường xuyên các seminar, techtalk với doanh nghiệp và các
+                        chuyến tham quan doanh nghiệp dành cho học viên. Cuối mỗi khóa học, các doanh nghiệp sẽ tham gia
+                        phiên phỏng vấn để đánh giá năng lực và tuyển dụng học viên.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/6.jpg" alt="Surface-Go-3" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Thực chiến: Học thông qua làm</h4>
+                    <p class="card-text">
+                        Học viên sẽ bắt đầu lập trình từ ngày đầu tiên tại CodeGym. Chương trình học được cá nhân hoá
+                        trong môi trường học tập sáng tạo, với cường độ cao và nhịp độ nhanh, làm sản phẩm thực, thúc
+                        đẩy sự hợp tác thông qua lập trình cặp trong các giờ thực hành.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/7.jpg" alt="Surface-Go-3" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Hỗ trợ tối đa</h4>
+                    <p class="card-text">
+                        Đội ngũ giảng viên, tutor kinh nghiệm của CodeGym hướng dẫn, hỗ trợ học viên liên tục, giúp học
+                        viên nhanh chóng cải thiện và nâng cao chất lượng chương trình phần mềm. Kết thúc chương trình,
+                        học viên tìm việc với sự hỗ trợ và cam kết của CodeGym.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <img class="card-img-top" src="images/8.jpg" alt="Surface-Go-3" width="350" height="195">
+                <div class="card-body">
+                    <h4 class="card-title">Công nghệ giáo dục</h4>
+                    <p class="card-text">
+                        CodeGym nghiên cứu và áp dụng các phương pháp dạy và học hiệu quả nhất: Học tập qua dự án
+                        (Project-based learning) và Học tập đảo ngược (Flipped learning). Học viên được trang bị kỹ năng
+                        học tập suốt đời, kỹ năng làm việc và phát triển nghề nghiệp.
+                    </p>
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-secondary">Xem chi tiết &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    <h2 class="mt-5 mb-3 text-center">HỆ THỐNG PHẦN MỀM HỖ TRỢ HỌC TẬP</h2>
+    <div class="row text-center">
+        <div class="col-md-12 mb-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-text">
+                        Bạn sẽ có toàn quyền truy cập vào các hệ thống phần mềm hỗ trợ học tập hiện đại của CodeGym, bao
+                        gồm: Hệ thống học trực tuyến, hệ thống quản lý dự án, hệ thống luyện code, hệ thống hồ sơ năng
+                        lực trực tuyến, và bộ tài liệu các khoá học có video hướng dẫn thực hành, bài đọc, bài thực
+                        hành, bài tập, quiz….
+
+                        Không chỉ hỗ trợ việc học, hệ thống số còn giúp huấn luyện viên theo – đánh giá năng lưc của
+                        từng học viên để có phương pháp đào tạo phù hợp.
+                    </h5>
+                    <img src="images/he-thong-hoc.png">
+                </div>
+                <div class="card-footer py-2">
+                    <a href="#" class="btn btn-warning">Khám phá &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    <h4 class="mt-5 mb-3 text-center">Học viên CodeGym đang làm ở đâu?</h4>
+    <div class="row text-center">
+        <div class="col-md-12 mb-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-text">
+                        Mặc dù hơn 80% học viên không có kinh nghiệm về lập trình trước đó. Theo tỉ lệ thống kê, 100%
+                        học viên của CodeGym có việc làm trong 45 ngày kể từ khi tốt nghiệp, với mức lương trung bình từ
+                        6 – 12 triệu/tháng.
+                    </h5>
+                    <div class="row m-6">
+                        <div class="col-3">
+                            <img src="images/fpt.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/nal.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/ntq.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/vela.png" width="300px" height="100px">
+                        </div>
+                    </div>
+                    <div class="row m-6">
+                        <div class="col-3">
+                            <img src="images/viet.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/septeni-logo.jpg" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/mobio-logo.jpg" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/Ecommage-Logo-Brandname.png" width="300px" height="100px">
+                        </div>
+                    </div>
+                    <div class="row m-6">
+                        <div class="col-3">
+                            <img src="images/revotech.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/AC-man.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/bi-plus.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/Seatech.png" width="300px" height="100px">
+                        </div>
+                    </div>
+                    <div class="row m-6">
+                        <div class="col-3">
+                            <img src="images/mcredit.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/deha.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/Agilead.png" width="300px" height="100px">
+                        </div>
+                        <div class="col-3">
+                            <img src="images/NCC.png" width="300px" height="100px">
+                        </div>
+                    </div>
+                    <div class="card-footer py-2">
+                        <a href="#" class="btn btn-warning">Xem thêm &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="container-fluid text-center py-4 mt-4" id="contact">
+    <p class="lead pb-3">
+        Hãy gửi mail cho chúng tôi, và chúng tôi sẽ liên lạc với bạn sớm nhất có thể.
+    </p>
+    <a href="#" class="btn btn-primary btn-lg mb-4" role="button">Gửi email</a>
+</section>
+
+<footer class="py-3 bg-light">
+    <div class="container">
+        <p class="text-center">Copyright &copy; Codegym</p>
+    </div>
+</footer>
+</body>
+</html>

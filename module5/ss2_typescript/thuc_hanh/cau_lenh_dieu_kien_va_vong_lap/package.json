@@ -1,0 +1,7 @@
+{
+  "name": "cau_lenh_dieu_kien_va_vong_lap",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
+}

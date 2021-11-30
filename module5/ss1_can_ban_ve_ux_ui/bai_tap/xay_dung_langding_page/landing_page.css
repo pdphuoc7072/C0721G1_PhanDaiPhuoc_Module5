@@ -1,0 +1,16 @@
+body {
+    padding-top: 30px;
+}
+
+.btn-primary {
+    background-color: #c60063;
+    border-color: #c60063;
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: #c60063;
+    color: #c60063;
+}
+#contact {
+    background: lightgoldenrodyellow no-repeat center;
+}

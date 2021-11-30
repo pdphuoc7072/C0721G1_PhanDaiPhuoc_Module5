@@ -1,0 +1,7 @@
+{
+  "name": "xay_dung_cac_doi_tuong_hinh_hoc",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.5.2"
+  }
+}
