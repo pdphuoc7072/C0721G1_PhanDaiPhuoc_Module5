@@ -1,0 +1,27 @@
+<div class="container-fluid mt-5">
+  <div class="row mt-2">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+          <p>Chọn màu</p>
+        </div>
+        <div class="col-6">
+          <input type="color" name="color" id="color" [(ngModel)]="color">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">Kết quả</div>
+        <div class="col-6">
+          <div [style.backgroundColor]="color">
+            {{color}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

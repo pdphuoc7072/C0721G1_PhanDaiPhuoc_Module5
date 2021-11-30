@@ -1,0 +1,68 @@
+<h2>Calculator</h2>
+<div class="container-fluid mt-5">
+  <div class="row mt-2">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+          <p>First number</p>
+        </div>
+        <div class="col-6">
+          <input type="number" placeholder="Enter first number" name="firstNum" id="firstNum" [value]="firstNum"
+                 (change)="onFirstChange($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+          <p>Select operator</p>
+        </div>
+        <div class="col-6">
+          <select name="operation" id="operation" [value]="operator" (change)="onSelectChange($event)">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+          <p>Second number</p>
+        </div>
+        <div class="col-6">
+          <input type="number" placeholder="Enter second number" name="secondNum" id="secondNum" [value]="secondNum"
+                 (change)="onSecondChange($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-primary" (click)="calculate()">Calculate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-6">
+          <h3>{{result}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
