@@ -1,0 +1,45 @@
+<h2>Login form</h2>
+<div class="col-6">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="email" class="form-label">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="email" formControlName="email" aria-describedby="emailError">
+        <div id="emailError" class="form-text text-danger" *ngIf="!email.valid && (email.dirty || email.touched)">
+          <div [hidden]="!email.errors.required">
+            Email is required!!
+          </div>
+          <div [hidden]="!email.errors.pattern">
+            Email should be correct pattern!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="password" class="form-label">Password</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="password" formControlName="password"
+               aria-describedby="passwordError">
+        <div id="passwordError" class="form-text text-danger"
+             *ngIf="!password.valid && (password.dirty || password.touched)">
+          <div [hidden]="!password.errors.required">
+            Password is required!!
+          </div>
+          <div [hidden]="!password.errors.pattern">
+            Password should be correct pattern!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
