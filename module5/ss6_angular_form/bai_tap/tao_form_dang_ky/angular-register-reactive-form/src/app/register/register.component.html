@@ -1,0 +1,128 @@
+<h2>Register form</h2>
+<div class="col-6">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="email" class="form-label">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="email" formControlName="email" aria-describedby="emailError">
+        <div id="emailError" class="form-text text-danger" *ngIf="!email.valid && (email.dirty || email.touched)">
+          <div [hidden]="!email.errors.required">
+            Email is required
+          </div>
+          <div [hidden]="!email.errors.email">
+            Email is not format
+          </div>
+        </div>
+      </div>
+    </div>
+    <div formGroupName="passwordGroup">
+      <div class="row mb-3">
+        <div class="col-4">
+          <label for="password" class="form-label">Password</label>
+        </div>
+        <div class="col-8">
+          <input type="password" class="form-control" id="password" formControlName="password"
+                 aria-describedby="passwordError">
+          <div id="passwordError" class="form-text text-danger"
+               *ngIf="!password.valid && (password.dirty || password.touched)">
+            <div [hidden]="!password.errors.required">
+              Password is required
+            </div>
+            <div [hidden]="!password.errors.minlength">
+              Password min length is 6
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-4">
+          <label for="confirmPassword" class="form-label">Confirm password</label>
+        </div>
+        <div class="col-8">
+          <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword"
+                 aria-describedby="confirmPasswordError">
+          <div id="confirmPasswordError" class="form-text text-danger"
+               *ngIf="!confirmPassword.valid && (confirmPassword.dirty || confirmPassword.touched)">
+            <div [hidden]="!confirmPassword.errors.required">
+              Confirm password is required
+            </div>
+            <div [hidden]="!confirmPassword.errors.minlength">
+              Confirm password min length is 6
+            </div>
+          </div>
+          <div class="form-text text-danger" *ngIf="passwordGroup.hasError('passwordNotMatch')">
+            Confirm password is not match
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="country" class="form-label">Country</label>
+      </div>
+      <div class="col-8">
+        <select id="country" name="country" formControlName="country" aria-describedby="countryError">
+          <option *ngFor="let c of countryList" [ngValue]="c.id">{{c.name}}</option>
+        </select>
+        <div id="countryError" class="form-text text-danger"
+             *ngIf="!country.valid && (country.dirty || country.touched)">
+          Country is required
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="age" class="form-label">Age</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="age" formControlName="age" aria-describedby="ageError">
+        <div id="ageError" class="form-text text-danger" *ngIf="!age.valid && (age.dirty || age.touched)">
+          <div *ngIf="age.errors.gte">
+            Age should be greater than 18
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label>Gender </label>
+      </div>
+      <div class="col-8">
+        <input type="radio" value="male" name="gender" formControlName="gender"
+               aria-describedby="genderError"> Male
+        <input type="radio" value="female" name="gender" formControlName="gender"
+               aria-describedby="genderError"> Female
+        <input type="radio" value="LGBT" name="gender" formControlName="gender"
+               aria-describedby="genderError"> LGBT
+        <div id="genderError" class="form-text text-danger" *ngIf="!gender.valid && (gender.dirty || gender.touched)">
+          Gender is required
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="phone" class="form-label">Phone</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="phone" formControlName="phone" aria-describedby="phoneError">
+        <div id="phoneError" class="form-text text-danger"
+             *ngIf="!phone.valid && (phone.dirty || phone.touched)">
+          <div [hidden]="!phone.errors.required">
+            Phone is required
+          </div>
+          <div [hidden]="!phone.errors.pattern">
+            Phone should be pattern
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
