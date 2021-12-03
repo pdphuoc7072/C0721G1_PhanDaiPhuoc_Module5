@@ -1,0 +1,9 @@
+<h2>Rating Bar</h2>
+<div *ngIf="showRatingValue">
+  {{ratingValue}}
+</div>
+<div class="rating-bar" (mouseleave)="reset()">
+  <div class="rating-unit" *ngFor="let item of ratingUnits; index as i" [class.active]="item.active" (click)="select(i)" (mouseenter)="enter(i)">
+    {{item.value}}
+  </div>
+</div>

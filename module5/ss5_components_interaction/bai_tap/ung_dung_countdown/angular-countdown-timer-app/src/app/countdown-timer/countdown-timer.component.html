@@ -1,0 +1,10 @@
+<h2>Countdown Timer</h2>
+<div class="d-grid gap-4 d-md-block mx-auto">
+  <button type="button" class="btn btn-success" (click)="start()">Start</button>
+  <button type="button" class="btn btn-warning" (click)="stop()">Stop</button>
+  <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
+</div>
+<div class="timer">
+  <span class="fs-1">{{remainingTime}}</span>
+</div>
+<p class="fs-3">{{message}}</p>
