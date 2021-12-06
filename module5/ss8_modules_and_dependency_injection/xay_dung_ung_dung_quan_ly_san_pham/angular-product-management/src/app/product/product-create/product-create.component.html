@@ -1,0 +1,52 @@
+<h2>Tạo mới sản phẩm</h2>
+<div class="col-6">
+  <form [formGroup]="productForm" (ngSubmit)="submit()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="id" class="form-label">Mã sản phẩm: </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="id" formControlName="id" aria-describedby="idError">
+<!--        <div id="emailError" class="form-text text-danger" *ngIf="!email.valid && (email.dirty || email.touched)">-->
+<!--          <div [hidden]="!email.errors.required">-->
+<!--            Email is required-->
+<!--          </div>-->
+<!--          <div [hidden]="!email.errors.email">-->
+<!--            Email is not format-->
+<!--          </div>-->
+<!--        </div>-->
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Tên sản phẩm: </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="nameError">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="price" class="form-label">Giá sản phẩm: </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="price" formControlName="price" aria-describedby="priceError">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="description" class="form-label">Giá sản phẩm: </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="description" formControlName="description" aria-describedby="descriptionError">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary">Tạo mới</button>
+      </div>
+    </div>
+  </form>
+</div>
+
