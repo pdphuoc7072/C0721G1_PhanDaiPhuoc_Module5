@@ -1,12 +1,20 @@
-<h2>Edit position</h2>
+<h2>Edit rent type</h2>
 <div class="col-6">
-  <form [formGroup]="positionForm" (ngSubmit)="updatePosition(id)">
+  <form [formGroup]="rentTypeForm" (ngSubmit)="updateRentType(id)">
     <div class="row mb-3">
       <div class="col-4">
         <label for="name" class="form-label">Name </label>
       </div>
       <div class="col-8">
         <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="cost" class="form-label">Cost </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="cost" formControlName="cost">
       </div>
     </div>
     <div class="row mb-3">
@@ -17,4 +25,3 @@
     </div>
   </form>
 </div>
-

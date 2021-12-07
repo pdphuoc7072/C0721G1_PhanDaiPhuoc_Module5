@@ -61,8 +61,8 @@ export class EmployeeEditComponent implements OnInit {
   }
 
   updateEmployee(id: string) {
-    const product = this.employeeForm.value;
-    this.employeeService.update(id, product).subscribe(() => {
+    const employee = this.employeeForm.value;
+    this.employeeService.update(id, employee).subscribe(() => {
       this.router.navigate(['/employee/list']);
     }, error => {
       console.log(error);

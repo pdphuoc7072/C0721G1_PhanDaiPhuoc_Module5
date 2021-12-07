@@ -105,28 +105,6 @@
         "name": "Quản lý",
         "id": 4
       }
-    },
-    {
-      "id": "NV-0003",
-      "name": "Nguyễn Tiến Dũng",
-      "dateOfBirth": "1973-06-05",
-      "idCard": "200364139",
-      "salary": "32000000",
-      "phone": "0914136782",
-      "email": "rtyu123@yahoo.com.vn",
-      "address": "Tp. HCM",
-      "position": {
-        "name": "Quản lý",
-        "id": 5
-      },
-      "educationDegree": {
-        "name": "Đại học",
-        "id": 3
-      },
-      "division": {
-        "name": "Quản lý",
-        "id": 4
-      }
     }
   ],
   "customerTypeList": [
@@ -150,5 +128,46 @@
       "name": "Member",
       "id": 5
     }
+  ],
+  "customerList": [
+    {
+      "id": "KH-0001",
+      "name": "Phan Bảo Hân",
+      "dateOfBirth": "1988-07-27",
+      "gender": "1",
+      "idCard": "201426720",
+      "phone": "0906514122",
+      "email": "fghju5678@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "name": "Diamond",
+        "id": 1
+      }
+    }
+  ],
+  "rentTypeList": [
+    {
+      "name": "Năm",
+      "cost": "500000000",
+      "id": 1
+    },
+    {
+      "name": "Tháng",
+      "cost": "80000000",
+      "id": 2
+    },
+    {
+      "name": "Ngày",
+      "cost": "4000000",
+      "id": 3
+    },
+    {
+      "name": "Giờ",
+      "cost": "800000",
+      "id": 4
+    }
+  ],
+  "servicesList": [
+
   ]
 }

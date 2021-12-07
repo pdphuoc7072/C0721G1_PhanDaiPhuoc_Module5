@@ -1,0 +1,44 @@
+<h1>Customer list</h1>
+<a routerLink="/customer/create">Create new customer</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Date of Birth</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Id card</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Customer type</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customerList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.dateOfBirth | date: 'dd-MM-yyyy'}}</td>
+    <td [ngSwitch]="customer.gender">
+      <span *ngSwitchCase="0">Male</span>
+      <span *ngSwitchCase="1">Female</span>
+      <span *ngSwitchCase="2">LGBT</span>
+    </td>
+    <td>{{customer.idCard}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.customerType.name}}</td>
+    <td>
+      <a [routerLink]="['/customer/edit', customer.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/customer/delete', customer.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
