@@ -1,0 +1,24 @@
+<h1>Customer type list</h1>
+<a routerLink="/customer-type/create">Create new customer type</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Name</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customerType of customerTypeList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{customerType.name}}</td>
+    <td>
+      <a [routerLink]="['/customer-type/edit', customerType.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/customer-type/delete', customerType.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

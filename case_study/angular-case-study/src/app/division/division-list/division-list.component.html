@@ -1,0 +1,24 @@
+<h1>Division list</h1>
+<a routerLink="/division/create">Create new division</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Name</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let division of divisionList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{division.name}}</td>
+    <td>
+      <a [routerLink]="['/division/edit', division.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/division/delete', division.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

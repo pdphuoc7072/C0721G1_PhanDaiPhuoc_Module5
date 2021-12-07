@@ -1,0 +1,24 @@
+<h1>Education degree list</h1>
+<a routerLink="/education-degree/create">Create new education degree</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Name</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let educationDegree of educationDegreeList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{educationDegree.name}}</td>
+    <td>
+      <a [routerLink]="['/education-degree/edit', educationDegree.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/education-degree/delete', educationDegree.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

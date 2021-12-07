@@ -1,0 +1,108 @@
+<h2>Delete employee</h2>
+<div class="col-6">
+  <form [formGroup]="employeeForm" (ngSubmit)="deleteEmployee(id)">
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="id" class="form-label">Id</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="id" formControlName="id">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Name</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="dateOfBirth" class="form-label">Date of birth</label>
+      </div>
+      <div class="col-8">
+        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="idCard" class="form-label">Id card</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="idCard" formControlName="idCard">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="salary" class="form-label">Salary</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="salary" formControlName="salary">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="phone" class="form-label">Phone</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="phone" formControlName="phone">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="email" class="form-label">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="email" formControlName="email">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="address" class="form-label">Address</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="address" formControlName="address">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="position" class="form-label">Position</label>
+      </div>
+      <div class="col-8">
+        <select id="position" name="position" formControlName="position" aria-describedby="positionError">
+          <option *ngFor="let position of positionList" [ngValue]="position" [selected]="position.id">{{position.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="educationDegree" class="form-label">Education degree</label>
+      </div>
+      <div class="col-8">
+        <select id="educationDegree" name="educationDegree" formControlName="educationDegree"
+                aria-describedby="educationDegreeError">
+          <option *ngFor="let educationDegree of educationDegreeList" [ngValue]="educationDegree" [selected]="educationDegree.id">{{educationDegree.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="division" class="form-label">Division</label>
+      </div>
+      <div class="col-8">
+        <select id="division" name="division" formControlName="division" aria-describedby="divisionError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let division of divisionList" [ngValue]="division" [selected]="division.id">{{division.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary">Delete</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/employee/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

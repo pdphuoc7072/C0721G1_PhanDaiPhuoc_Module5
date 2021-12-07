@@ -1,0 +1,154 @@
+{
+  "positionList": [
+    {
+      "id": 1,
+      "name": "Lễ tân"
+    },
+    {
+      "name": "Phục vụ",
+      "id": 2
+    },
+    {
+      "name": "Chuyên viên",
+      "id": 3
+    },
+    {
+      "name": "Giám sát",
+      "id": 4
+    },
+    {
+      "name": "Quản lý",
+      "id": 5
+    },
+    {
+      "name": "Giám đốc",
+      "id": 6
+    }
+  ],
+  "educationDegreeList": [
+    {
+      "name": "Trung cấp",
+      "id": 1
+    },
+    {
+      "name": "Cao đẳng",
+      "id": 2
+    },
+    {
+      "name": "Đại học",
+      "id": 3
+    },
+    {
+      "name": "Sau đại học",
+      "id": 4
+    }
+  ],
+  "divisionList": [
+    {
+      "name": "Sale - Marketing",
+      "id": 1
+    },
+    {
+      "name": "Hành chính",
+      "id": 2
+    },
+    {
+      "name": "Phục vụ",
+      "id": 3
+    },
+    {
+      "name": "Quản lý",
+      "id": 4
+    }
+  ],
+  "employeeList": [
+    {
+      "id": "NV-0001",
+      "name": "Nguyễn Thành Đạt",
+      "dateOfBirth": "1965-12-04",
+      "idCard": "200146971",
+      "salary": "40000000",
+      "phone": "0914136970",
+      "email": "abcghyu123@gmail.com",
+      "address": "Hà Nội",
+      "position": {
+        "name": "Giám đốc",
+        "id": 6
+      },
+      "educationDegree": {
+        "name": "Sau đại học",
+        "id": 4
+      },
+      "division": {
+        "name": "Quản lý",
+        "id": 4
+      }
+    },
+    {
+      "id": "NV-0002",
+      "name": "Nguyễn Thị Ánh",
+      "dateOfBirth": "1978-06-01",
+      "idCard": "201479036",
+      "salary": "30000000",
+      "phone": "0916036178",
+      "email": "ghuui123@gmail.com",
+      "address": "Đà Nẵng",
+      "position": {
+        "name": "Quản lý",
+        "id": 5
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Quản lý",
+        "id": 4
+      }
+    },
+    {
+      "id": "NV-0003",
+      "name": "Nguyễn Tiến Dũng",
+      "dateOfBirth": "1973-06-05",
+      "idCard": "200364139",
+      "salary": "32000000",
+      "phone": "0914136782",
+      "email": "rtyu123@yahoo.com.vn",
+      "address": "Tp. HCM",
+      "position": {
+        "name": "Quản lý",
+        "id": 5
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Quản lý",
+        "id": 4
+      }
+    }
+  ],
+  "customerTypeList": [
+    {
+      "name": "Diamond",
+      "id": 1
+    },
+    {
+      "name": "Platinium",
+      "id": 2
+    },
+    {
+      "name": "Gold",
+      "id": 3
+    },
+    {
+      "name": "Silver",
+      "id": 4
+    },
+    {
+      "name": "Member",
+      "id": 5
+    }
+  ]
+}

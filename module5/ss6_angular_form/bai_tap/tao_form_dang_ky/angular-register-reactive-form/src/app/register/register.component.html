@@ -64,6 +64,7 @@
       </div>
       <div class="col-8">
         <select id="country" name="country" formControlName="country" aria-describedby="countryError">
+          <option value="" selected>---Select---</option>
           <option *ngFor="let c of countryList" [ngValue]="c.id">{{c.name}}</option>
         </select>
         <div id="countryError" class="form-text text-danger"

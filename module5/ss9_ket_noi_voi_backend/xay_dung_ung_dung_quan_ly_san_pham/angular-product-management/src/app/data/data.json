@@ -1,0 +1,66 @@
+{
+  "categoryList": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "name": "Oppo",
+      "id": 3
+    },
+    {
+      "name": "Xiaomi",
+      "id": 4
+    },
+    {
+      "name": "Nokia",
+      "id": 5
+    },
+    {
+      "name": "ABV",
+      "id": 6
+    }
+  ],
+  "productList": [
+    {
+      "name": "Iphone 12 Pro Max",
+      "price": "1200",
+      "description": "New 100%",
+      "category": {
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy A72",
+      "price": "450",
+      "description": "97%",
+      "category": {
+        "id": 2
+      }
+    },
+    {
+      "id": 3,
+      "name": "Oppo A71",
+      "price": "1450",
+      "description": "New 100%",
+      "category": {
+        "id": 3
+      }
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi Redmi Note 10 Pro",
+      "price": "1890",
+      "description": "New 100%",
+      "category": {
+        "id": 4
+      }
+    }
+  ]
+}

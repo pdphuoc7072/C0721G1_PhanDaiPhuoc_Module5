@@ -1,0 +1,19 @@
+<h2>Sửa danh mục</h2>
+<div class="col-6">
+  <form [formGroup]="categoryForm" (ngSubmit)="updateCategory(id)">
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Tên danh mục: </label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="nameError">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+      </div>
+    </div>
+  </form>
+</div>
