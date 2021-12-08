@@ -1,0 +1,73 @@
+<h2>Create attach service</h2>
+<div class="col-6">
+  <form [formGroup]="attachServiceForm" (ngSubmit)="saveAttachService()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Name</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="nameError">
+        <div id="nameError" class="form-text text-danger"
+             *ngIf="!name.valid && (name.dirty || name.touched)">
+          <div [hidden]="!name.errors.required">
+            Tên dịch vụ đi kèm không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="price" class="form-label">Price</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="price" formControlName="price" aria-describedby="priceError">
+        <div id="priceError" class="form-text text-danger" *ngIf="!price.valid && (price.dirty || price.touched)">
+          <div [hidden]="!price.errors.nan">
+            Giá phải là số!!!
+          </div>
+          <div [hidden]="!price.errors.zero">
+            Giá phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="unit" class="form-label">Unit</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="unit" formControlName="unit" aria-describedby="unitError">
+        <div id="unitError" class="form-text text-danger" *ngIf="!unit.valid && (unit.dirty || unit.touched)">
+          <div [hidden]="!unit.errors.nan">
+            Đơn vị phải là số!!!
+          </div>
+          <div [hidden]="!unit.errors.zero">
+            Đơn vị phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="status" class="form-label">Status</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="status" formControlName="status" aria-describedby="statusError">
+        <div id="statusError" class="form-text text-danger"
+             *ngIf="!status.valid && (status.dirty || status.touched)">
+          <div [hidden]="!status.errors.required">
+            Trạng thái khả dụng không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!attachServiceForm.valid">Create</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/attach-service/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+

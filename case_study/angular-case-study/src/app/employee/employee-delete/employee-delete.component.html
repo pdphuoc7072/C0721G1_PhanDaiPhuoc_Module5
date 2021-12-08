@@ -1,5 +1,5 @@
-<h2>Delete employee</h2>
-<div class="col-6">
+<h2 mat-dialog-title>Delete employee</h2>
+<div mat-dialog-content>
   <form [formGroup]="employeeForm" (ngSubmit)="deleteEmployee(id)">
     <div class="row mb-3">
       <div class="col-4">
@@ -70,8 +70,9 @@
         <label for="position" class="form-label">Position</label>
       </div>
       <div class="col-8">
-        <select id="position" name="position" formControlName="position" aria-describedby="positionError">
-          <option *ngFor="let position of positionList" [ngValue]="position" [selected]="position.id">{{position.name}}</option>
+        <select [compareWith]="comparePosition" id="position" name="position" formControlName="position"
+                aria-describedby="positionError">
+          <option *ngFor="let position of positionList" [ngValue]="position">{{position.name}}</option>
         </select>
       </div>
     </div>
@@ -80,9 +81,11 @@
         <label for="educationDegree" class="form-label">Education degree</label>
       </div>
       <div class="col-8">
-        <select id="educationDegree" name="educationDegree" formControlName="educationDegree"
+        <select [compareWith]="compareEducationDegree" id="educationDegree" name="educationDegree"
+                formControlName="educationDegree"
                 aria-describedby="educationDegreeError">
-          <option *ngFor="let educationDegree of educationDegreeList" [ngValue]="educationDegree" [selected]="educationDegree.id">{{educationDegree.name}}</option>
+          <option *ngFor="let educationDegree of educationDegreeList"
+                  [ngValue]="educationDegree">{{educationDegree.name}}</option>
         </select>
       </div>
     </div>
@@ -91,17 +94,21 @@
         <label for="division" class="form-label">Division</label>
       </div>
       <div class="col-8">
-        <select id="division" name="division" formControlName="division" aria-describedby="divisionError">
+        <select [compareWith]="compareDivision" id="division" name="division" formControlName="division"
+                aria-describedby="divisionError">
           <option value="" selected>---Select---</option>
-          <option *ngFor="let division of divisionList" [ngValue]="division" [selected]="division.id">{{division.name}}</option>
+          <option *ngFor="let division of divisionList" [ngValue]="division"
+                  [selected]="division.id">{{division.name}}</option>
         </select>
       </div>
     </div>
     <div class="row mb-3">
       <div class="col-4"></div>
-      <div class="col-4">
-        <button type="submit" class="btn btn-primary">Delete</button>
-        <button type="submit" class="btn btn-secondary" routerLink="/employee/list">Cancel</button>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" [mat-dialog-close]="true">Delete</button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
       </div>
     </div>
   </form>

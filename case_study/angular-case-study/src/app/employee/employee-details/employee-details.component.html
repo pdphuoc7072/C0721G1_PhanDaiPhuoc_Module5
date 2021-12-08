@@ -1,0 +1,77 @@
+<h2 mat-dialog-title>Details employee</h2>
+<div mat-dialog-content>
+  <table class="table table-hover table-striped">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Id</td>
+      <td>{{employee.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{employee.name}}</td>
+    </tr>
+    <tr>
+      <td>Date of birth</td>
+      <td>{{employee.dateOfBirth | date: 'dd-MM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Id card</td>
+      <td>{{employee.idCard}}</td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td>{{employee.salary}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{employee.phone}}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{employee.email}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{employee.address}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Position</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{employee.position.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{employee.position.name}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Education degree</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{employee.educationDegree.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{employee.educationDegree.name}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Division</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{employee.division.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{employee.division.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-light">Close</button>
+</mat-dialog-actions>

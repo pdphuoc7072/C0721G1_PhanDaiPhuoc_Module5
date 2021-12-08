@@ -29,8 +29,7 @@ export class CustomerCreateComponent implements OnInit {
   customerTypeList: CustomerType[] = [];
 
   constructor(private customerService: CustomerService,
-              private customerTypeService: CustomerTypeService,
-              private router: Router) {
+              private customerTypeService: CustomerTypeService) {
   }
 
   ngOnInit(): void {
@@ -40,7 +39,6 @@ export class CustomerCreateComponent implements OnInit {
   saveCustomer() {
     const customer = this.customerForm.value;
     this.customerService.save(customer).subscribe(() => {
-      this.router.navigate(['customer/list']);
     }, error => {
       console.log(error);
     });

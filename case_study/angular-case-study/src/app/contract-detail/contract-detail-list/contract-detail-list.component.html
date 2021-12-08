@@ -1,0 +1,30 @@
+<h1>Contract detail list</h1>
+<a routerLink="/contract-detail/create">Create new contract detail</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Contract Id</th>
+    <th scope="col">Attach service name</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let contractDetail of contractDetailList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{contractDetail.contract.id}}</td>
+    <td>{{contractDetail.attachService.name}}</td>
+    <td>{{contractDetail.quantity}}</td>
+    <td>
+      <a [routerLink]="['/contract-detail/edit', contractDetail.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['/contract-detail/delete', contractDetail.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+

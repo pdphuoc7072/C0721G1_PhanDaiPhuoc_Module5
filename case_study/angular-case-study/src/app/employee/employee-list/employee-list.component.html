@@ -1,5 +1,5 @@
 <h1>Employee list</h1>
-<a routerLink="/employee/create">Create new employee</a>
+<button mat-button (click)="openDialogCreate()" class="btn btn-primary">Create new employee</button>
 <table class="table table-hover table-striped">
   <thead>
   <tr>
@@ -15,6 +15,7 @@
     <th scope="col">Position</th>
     <th scope="col">Education Degree</th>
     <th scope="col">Division</th>
+    <th scope="col">Details</th>
     <th scope="col">Edit</th>
     <th scope="col">Delete</th>
   </tr>
@@ -34,10 +35,16 @@
     <td>{{employee.educationDegree.name}}</td>
     <td>{{employee.division.name}}</td>
     <td>
-      <a [routerLink]="['/employee/edit', employee.id]">Edit</a>
+      <button mat-button (click)="openDialogDetails(employee.id)" class="btn btn-primary">
+        <i class="fas fa-info-circle"></i></button>
     </td>
     <td>
-      <a [routerLink]="['/employee/delete', employee.id]">Delete</a>
+      <button mat-button (click)="openDialogEdit(employee.id)" class="btn btn-warning"><i class="fas fa-edit"></i>
+      </button>
+    </td>
+    <td>
+      <button mat-button (click)="openDialogDelete(employee.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+      </button>
     </td>
   </tr>
   </tbody>

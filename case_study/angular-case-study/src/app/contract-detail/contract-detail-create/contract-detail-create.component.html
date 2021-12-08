@@ -1,0 +1,61 @@
+<h2>Create contract detail</h2>
+<div class="col-6">
+  <form [formGroup]="contractDetailForm" (ngSubmit)="saveContractDetail()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="contract" class="form-label">Contract</label>
+      </div>
+      <div class="col-8">
+        <select id="contract" name="contract" formControlName="contract"
+                aria-describedby="contractError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let contract of contractList" [ngValue]="contract">{{contract.id}}</option>
+        </select>
+        <div id="contractError" class="form-text text-danger"
+             *ngIf="!contract.valid && (contract.dirty || contract.touched)">
+          Id hợp đồng không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="attachService" class="form-label">Attach service</label>
+      </div>
+      <div class="col-8">
+        <select id="attachService" name="attachService" formControlName="attachService"
+                aria-describedby="attachServiceError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let attachService of attachServiceList" [ngValue]="attachService">{{attachService.name}}</option>
+        </select>
+        <div id="attachServiceError" class="form-text text-danger"
+             *ngIf="!attachService.valid && (attachService.dirty || attachService.touched)">
+          Tên hợp đồng đính kèm không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="quantity" class="form-label">Quantity</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="quantity" formControlName="quantity" aria-describedby="quantityError">
+        <div id="quantityError" class="form-text text-danger" *ngIf="!quantity.valid && (quantity.dirty || quantity.touched)">
+          <div [hidden]="!quantity.errors.nan">
+            Số lượng phải là số!!!
+          </div>
+          <div [hidden]="!quantity.errors.zero">
+            Số lượng phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!contractDetailForm.valid">Create</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/contract-detail/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+

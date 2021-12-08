@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer-delete',
@@ -12,18 +13,25 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 })
 export class CustomerDeleteComponent implements OnInit {
 
-  customerForm: FormGroup;
+  customerForm = new FormGroup({
+    id: new FormControl(),
+    name: new FormControl(),
+    dateOfBirth: new FormControl(),
+    gender: new FormControl(),
+    idCard: new FormControl(),
+    phone: new FormControl(),
+    email: new FormControl(),
+    address: new FormControl(),
+    customerType: new FormControl()
+  });
   id: string;
   customerTypeList: CustomerType[] = [];
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = paramMap.get('id');
-      this.getCustomer(this.id);
-    });
+              @Inject(MAT_DIALOG_DATA) id: string) {
+    this.id = id;
+    this.getCustomer(id);
   }
 
   ngOnInit(): void {
@@ -32,23 +40,16 @@ export class CustomerDeleteComponent implements OnInit {
 
   getCustomer(id: string) {
     return this.customerService.findById(id).subscribe(customer => {
-      this.customerForm = new FormGroup({
-        id: new FormControl(customer.id),
-        name: new FormControl(customer.name),
-        dateOfBirth: new FormControl(customer.dateOfBirth),
-        gender: new FormControl(customer.gender),
-        idCard: new FormControl(customer.idCard),
-        phone: new FormControl(customer.phone),
-        email: new FormControl(customer.email),
-        address: new FormControl(customer.address),
-        customerType: new FormControl(customer.customerType)
-      });
+      this.customerForm.setValue(customer);
     });
+  }
+
+  compareCustomerType(c1: CustomerType, c2: CustomerType): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
   deleteCustomer(id: string) {
     this.customerService.delete(id).subscribe(() => {
-      this.router.navigate(['/customer/list']);
     }, error => {
       console.log(error);
     });

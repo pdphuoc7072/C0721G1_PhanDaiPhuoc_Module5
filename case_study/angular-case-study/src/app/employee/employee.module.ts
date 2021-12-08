@@ -7,14 +7,17 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeDeleteComponent } from './employee-delete/employee-delete.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 @NgModule({
-  declarations: [EmployeeListComponent, EmployeeCreateComponent, EmployeeEditComponent, EmployeeDeleteComponent],
-  imports: [
-    CommonModule,
-    EmployeeRoutingModule,
-    ReactiveFormsModule
-  ]
+  declarations: [EmployeeListComponent, EmployeeCreateComponent, EmployeeEditComponent, EmployeeDeleteComponent, EmployeeDetailsComponent],
+    imports: [
+        CommonModule,
+        EmployeeRoutingModule,
+        ReactiveFormsModule,
+        MatDialogModule
+    ]
 })
 export class EmployeeModule { }

@@ -8,20 +8,8 @@ import {EmployeeDeleteComponent} from './employee-delete/employee-delete.compone
 
 const routes: Routes = [
   {
-    path: 'list',
+    path: '',
     component: EmployeeListComponent
-  },
-  {
-    path: 'create',
-    component: EmployeeCreateComponent
-  },
-  {
-    path: 'edit/:id',
-    component: EmployeeEditComponent
-  },
-  {
-    path: 'delete/:id',
-    component: EmployeeDeleteComponent
   }
 ];
 

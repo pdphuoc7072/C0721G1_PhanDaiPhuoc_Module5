@@ -1,5 +1,5 @@
-<h2>Edit employee</h2>
-<div class="col-6">
+<h2 mat-dialog-title>Edit employee</h2>
+<div mat-dialog-content>
   <form [formGroup]="employeeForm" (ngSubmit)="updateEmployee(id)" novalidate>
     <div class="row mb-3">
       <div class="col-4">
@@ -27,8 +27,10 @@
         <label for="dateOfBirth" class="form-label">Date of birth</label>
       </div>
       <div class="col-8">
-        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth" aria-describedby="dateOfBirthError">
-        <div id="dateOfBirthError" class="form-text text-danger" *ngIf="!dateOfBirth.valid && (dateOfBirth.dirty || dateOfBirth.touched)">
+        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth"
+               aria-describedby="dateOfBirthError">
+        <div id="dateOfBirthError" class="form-text text-danger"
+             *ngIf="!dateOfBirth.valid && (dateOfBirth.dirty || dateOfBirth.touched)">
           <div [hidden]="!dateOfBirth.errors.required">
             Ngày sinh không được để trống!!!
           </div>
@@ -61,7 +63,10 @@
       <div class="col-8">
         <input type="text" class="form-control" id="salary" formControlName="salary" aria-describedby="salaryError">
         <div id="salaryError" class="form-text text-danger" *ngIf="!salary.valid && (salary.dirty || salary.touched)">
-          <div [hidden]="!salary.errors.gte">
+          <div [hidden]="!salary.errors.nan">
+            Lương phải là số!!!
+          </div>
+          <div [hidden]="!salary.errors.zero">
             Lương phải là số dương!!!
           </div>
         </div>
@@ -118,8 +123,10 @@
         <label for="position" class="form-label">Position</label>
       </div>
       <div class="col-8">
-        <select id="position" name="position" formControlName="position" aria-describedby="positionError">
-          <option *ngFor="let position of positionList" [ngValue]="position" [selected]="position.id">{{position.name}}</option>
+        <select [compareWith]="comparePosition" id="position" name="position" formControlName="position"
+                aria-describedby="positionError">
+          <option value="">---Select---</option>
+          <option *ngFor="let position of positionList" [ngValue]="position">{{position.name}}</option>
         </select>
         <div id="positionError" class="form-text text-danger"
              *ngIf="!position.valid && (position.dirty || position.touched)">
@@ -132,9 +139,11 @@
         <label for="educationDegree" class="form-label">Education degree</label>
       </div>
       <div class="col-8">
-        <select id="educationDegree" name="educationDegree" formControlName="educationDegree"
-                aria-describedby="educationDegreeError">
-          <option *ngFor="let educationDegree of educationDegreeList" [ngValue]="educationDegree" [selected]="educationDegree.id">{{educationDegree.name}}</option>
+        <select [compareWith]="compareEducationDegree" id="educationDegree" name="educationDegree"
+                formControlName="educationDegree" aria-describedby="educationDegreeError">
+          <option value="">---Select---</option>
+          <option *ngFor="let educationDegree of educationDegreeList"
+                  [ngValue]="educationDegree">{{educationDegree.name}}</option>
         </select>
         <div id="educationDegreeError" class="form-text text-danger"
              *ngIf="!educationDegree.valid && (educationDegree.dirty || educationDegree.touched)">
@@ -147,9 +156,10 @@
         <label for="division" class="form-label">Division</label>
       </div>
       <div class="col-8">
-        <select id="division" name="division" formControlName="division" aria-describedby="divisionError">
+        <select [compareWith]="compareDivision" id="division" name="division" formControlName="division"
+                aria-describedby="divisionError">
           <option value="" selected>---Select---</option>
-          <option *ngFor="let division of divisionList" [ngValue]="division" [selected]="division.id">{{division.name}}</option>
+          <option *ngFor="let division of divisionList" [ngValue]="division">{{division.name}}</option>
         </select>
         <div id="divisionError" class="form-text text-danger"
              *ngIf="!division.valid && (division.dirty || division.touched)">
@@ -159,9 +169,13 @@
     </div>
     <div class="row mb-3">
       <div class="col-4"></div>
-      <div class="col-4">
-        <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Update</button>
-        <button type="submit" class="btn btn-secondary" routerLink="/employee/list">Cancel</button>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" [mat-dialog-close]="true"
+                  [disabled]="!employeeForm.valid">Update
+          </button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
       </div>
     </div>
   </form>

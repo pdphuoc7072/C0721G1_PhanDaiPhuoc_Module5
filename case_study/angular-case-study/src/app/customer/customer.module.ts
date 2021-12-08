@@ -7,14 +7,17 @@ import { CustomerCreateComponent } from './customer-create/customer-create.compo
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { CustomerDeleteComponent } from './customer-delete/customer-delete.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [CustomerListComponent, CustomerCreateComponent, CustomerEditComponent, CustomerDeleteComponent],
-  imports: [
-    CommonModule,
-    CustomerRoutingModule,
-    ReactiveFormsModule
-  ]
+  declarations: [CustomerListComponent, CustomerCreateComponent, CustomerEditComponent, CustomerDeleteComponent, CustomerDetailsComponent],
+    imports: [
+        CommonModule,
+        CustomerRoutingModule,
+        ReactiveFormsModule,
+        MatDialogModule
+    ]
 })
 export class CustomerModule { }

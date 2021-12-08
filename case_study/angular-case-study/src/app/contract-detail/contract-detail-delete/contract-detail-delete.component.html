@@ -1,0 +1,40 @@
+<h2>Edit contract detail</h2>
+<div class="col-6">
+  <form [formGroup]="contractDetailForm" (ngSubmit)="deleteContractDetail(id)">
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="contract" class="form-label">Contract</label>
+      </div>
+      <div class="col-8">
+        <select [compareWith]="compareContract" id="contract" name="contract" formControlName="contract">
+          <option *ngFor="let contract of contractList" [ngValue]="contract">{{contract.id}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="attachService" class="form-label">Attach service</label>
+      </div>
+      <div class="col-8">
+        <select [compareWith]="compareAttachService" id="attachService" name="attachService" formControlName="attachService">
+          <option *ngFor="let attachService of attachServiceList" [ngValue]="attachService">{{attachService.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="quantity" class="form-label">Quantity</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="quantity" formControlName="quantity">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary">Delete</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/contract-detail/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

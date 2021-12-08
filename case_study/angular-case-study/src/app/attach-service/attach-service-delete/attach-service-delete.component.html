@@ -1,0 +1,45 @@
+<h2>Delete attach service</h2>
+<div class="col-6">
+  <form [formGroup]="attachServiceForm" (ngSubmit)="deleteAttachService(id)">
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Name</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="price" class="form-label">Price</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="price" formControlName="price">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="unit" class="form-label">Unit</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="unit" formControlName="unit">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="status" class="form-label">Status</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="status" formControlName="status">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary">Delete</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/attach-service/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+

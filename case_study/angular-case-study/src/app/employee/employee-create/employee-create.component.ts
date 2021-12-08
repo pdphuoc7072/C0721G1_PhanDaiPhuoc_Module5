@@ -40,8 +40,7 @@ export class EmployeeCreateComponent implements OnInit {
   constructor(private employeeService: EmployeeService,
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
-              private divisionService: DivisionService,
-              private router: Router) {
+              private divisionService: DivisionService) {
   }
 
   ngOnInit(): void {
@@ -53,7 +52,6 @@ export class EmployeeCreateComponent implements OnInit {
   saveEmployee() {
     const employee = this.employeeForm.value;
     this.employeeService.save(employee).subscribe(() => {
-      this.router.navigate(['employee/list']);
     }, error => {
       console.log(error);
     });

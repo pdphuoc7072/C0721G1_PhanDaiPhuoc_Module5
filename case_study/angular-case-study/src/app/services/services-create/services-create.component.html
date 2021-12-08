@@ -1,0 +1,139 @@
+<h2>Create services</h2>
+<div class="col-6">
+  <form [formGroup]="servicesForm" (ngSubmit)="saveServices()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="id" class="form-label">Id</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="id" formControlName="id" aria-describedby="idError">
+        <div id="idError" class="form-text text-danger" *ngIf="!id.valid && (id.dirty || id.touched)">
+          <div [hidden]="!id.errors.required">
+            Mã dịch vụ không được để trống!!!
+          </div>
+          <div [hidden]="!id.errors.pattern">
+            Mã dịch vụ phải có định dạng là DV-XXXX (X là số 0-9)
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="name" class="form-label">Name</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="nameError">
+        <div id="nameError" class="form-text text-danger" *ngIf="!name.valid && (name.dirty || name.touched)">
+          <div [hidden]="!name.errors.required">
+            Họ tên không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="area" class="form-label">Area</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="area" formControlName="area" aria-describedby="areaError">
+        <div id="areaError" class="form-text text-danger"
+             *ngIf="!area.valid && (area.dirty || area.touched)">
+          <div [hidden]="!area.errors.nan">
+            Diện tích phải là số!!!
+          </div>
+          <div [hidden]="!area.errors.zero">
+            Diện tích phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="floor" class="form-label">Floor</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="floor" formControlName="floor" aria-describedby="floorError">
+        <div id="floorError" class="form-text text-danger"
+             *ngIf="!floor.valid && (floor.dirty || floor.touched)">
+          <div [hidden]="!floor.errors.nan">
+            Số tầng phải là số!!!
+          </div>
+          <div [hidden]="!floor.errors.zero">
+            Số tầng phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="maxPeople" class="form-label">Max people</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="maxPeople" formControlName="maxPeople" aria-describedby="maxPeopleError">
+        <div id="maxPeopleError" class="form-text text-danger"
+             *ngIf="!maxPeople.valid && (maxPeople.dirty || maxPeople.touched)">
+          <div [hidden]="!maxPeople.errors.nan">
+            Số người tối đa phải là số!!!
+          </div>
+          <div [hidden]="!maxPeople.errors.zero">
+            Số người tối đa phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="cost" class="form-label">Cost</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="cost" formControlName="cost" aria-describedby="costError">
+        <div id="costError" class="form-text text-danger"
+             *ngIf="!cost.valid && (cost.dirty || cost.touched)">
+          <div [hidden]="!cost.errors.nan">
+            Chi phí thuê phải là số!!!
+          </div>
+          <div [hidden]="!cost.errors.zero">
+            Chi phí thuê phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="status" class="form-label">Status</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="status" formControlName="status" aria-describedby="statusError">
+        <div id="statusError" class="form-text text-danger"
+             *ngIf="!status.valid && (status.dirty || status.touched)">
+          <div [hidden]="!status.errors.required">
+            Trạng thái không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="rentType" class="form-label">Rent type</label>
+      </div>
+      <div class="col-8">
+        <select id="rentType" name="rentType" formControlName="rentType" aria-describedby="rentTypeError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let rentType of rentTypeList" [ngValue]="rentType">{{rentType.name}}</option>
+        </select>
+        <div id="rentTypeError" class="form-text text-danger"
+             *ngIf="!rentType.valid && (rentType.dirty || rentType.touched)">
+          Kiểu thuê không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!servicesForm.valid">Create</button>
+        <button type="submit" class="btn btn-secondary" routerLink="/services/list">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+

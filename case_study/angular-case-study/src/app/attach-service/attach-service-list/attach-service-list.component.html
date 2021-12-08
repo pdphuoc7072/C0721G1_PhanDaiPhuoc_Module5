@@ -1,0 +1,30 @@
+<h1>Attach service list</h1>
+<a routerLink="/attach-service/create">Create new attach service</a>
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col">No.</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Unit</th>
+    <th scope="col">Status</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let attachService of attachServiceList; index as i">
+    <th>{{i + 1}}</th>
+    <td>{{attachService.name}}</td>
+    <td>{{attachService.price}}</td>
+    <td>{{attachService.unit}}</td>
+    <td>{{attachService.status}}</td>
+    <td>
+      <a [routerLink]="['//attach-service/edit', attachService.id]">Edit</a>
+    </td>
+    <td>
+      <a [routerLink]="['//attach-service/delete', attachService.id]">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

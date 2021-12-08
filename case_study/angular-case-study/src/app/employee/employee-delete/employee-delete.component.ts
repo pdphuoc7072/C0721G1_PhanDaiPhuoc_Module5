@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Position} from '../../model/position';
 import {EducationDegree} from '../../model/education-degree';
@@ -7,7 +7,7 @@ import {EmployeeService} from '../../service/employee.service';
 import {PositionService} from '../../service/position.service';
 import {EducationDegreeService} from '../../service/education-degree.service';
 import {DivisionService} from '../../service/division.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-delete',
@@ -16,7 +16,19 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 })
 export class EmployeeDeleteComponent implements OnInit {
 
-  employeeForm: FormGroup;
+  employeeForm = new FormGroup({
+    id: new FormControl(),
+    name: new FormControl(),
+    dateOfBirth: new FormControl(),
+    idCard: new FormControl(),
+    salary: new FormControl(),
+    phone: new FormControl(),
+    email: new FormControl(),
+    address: new FormControl(),
+    position: new FormControl(),
+    educationDegree: new FormControl(),
+    division: new FormControl()
+  });
   id: string;
   positionList: Position[] = [];
   educationDegreeList: EducationDegree[] = [];
@@ -26,12 +38,9 @@ export class EmployeeDeleteComponent implements OnInit {
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
               private divisionService: DivisionService,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = paramMap.get('id');
-      this.getEmployee(this.id);
-    });
+              @Inject(MAT_DIALOG_DATA) id: string) {
+    this.id = id;
+    this.getEmployee(id);
   }
 
   ngOnInit(): void {
@@ -42,25 +51,24 @@ export class EmployeeDeleteComponent implements OnInit {
 
   getEmployee(id: string) {
     return this.employeeService.findById(id).subscribe(employee => {
-      this.employeeForm = new FormGroup({
-        id: new FormControl(employee.id),
-        name: new FormControl(employee.name),
-        dateOfBirth: new FormControl(employee.dateOfBirth),
-        idCard: new FormControl(employee.idCard),
-        salary: new FormControl(employee.salary),
-        phone: new FormControl(employee.phone),
-        email: new FormControl(employee.email),
-        address: new FormControl(employee.address),
-        position: new FormControl(employee.position),
-        educationDegree: new FormControl(employee.educationDegree),
-        division: new FormControl(employee.division)
-      });
+      this.employeeForm.setValue(employee);
     });
+  }
+
+  comparePosition(c1: Position, c2: Position): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
+
+  compareEducationDegree(c1: EducationDegree, c2: EducationDegree): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+  }
+
+  compareDivision(c1: Division, c2: Division): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
   deleteEmployee(id: string) {
     this.employeeService.delete(id).subscribe(() => {
-      this.router.navigate(['/employee/list']);
     }, error => {
       console.log(error);
     });

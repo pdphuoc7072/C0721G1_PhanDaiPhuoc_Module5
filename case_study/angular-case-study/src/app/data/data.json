@@ -105,6 +105,72 @@
         "name": "Quản lý",
         "id": 4
       }
+    },
+    {
+      "id": "NV-0003",
+      "name": "Nguyễn Tiến Dũng",
+      "dateOfBirth": "1983-12-14",
+      "idCard": "200144536",
+      "salary": "20000000",
+      "phone": "0918147346",
+      "email": "kloiu78@yahoo.com",
+      "address": "Huế",
+      "position": {
+        "name": "Giám sát",
+        "id": 4
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Sale - Marketing",
+        "id": 1
+      }
+    },
+    {
+      "id": "NV-0004",
+      "name": "Trương Văn Cường",
+      "dateOfBirth": "1992-07-13",
+      "idCard": "201469713",
+      "salary": "19000000",
+      "phone": "0908179314",
+      "email": "tgyu78@gmail..com",
+      "address": "Quảng Trị",
+      "position": {
+        "name": "Chuyên viên",
+        "id": 3
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Sale - Marketing",
+        "id": 1
+      }
+    },
+    {
+      "id": "NV-0005",
+      "name": "Phan Văn Lê",
+      "dateOfBirth": "1990-08-04",
+      "idCard": "200364700",
+      "salary": "15000000",
+      "phone": "0914136791",
+      "email": "jkiui56@yahoo.com",
+      "address": "Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Hành chính",
+        "id": 2
+      }
     }
   ],
   "customerTypeList": [
@@ -133,15 +199,57 @@
     {
       "id": "KH-0001",
       "name": "Phan Bảo Hân",
-      "dateOfBirth": "1988-07-27",
+      "dateOfBirth": "1989-07-27",
       "gender": "1",
       "idCard": "201426720",
       "phone": "0906514122",
       "email": "fghju5678@gmail.com",
       "address": "Đà Nẵng",
       "customerType": {
-        "name": "Diamond",
-        "id": 1
+        "name": "Gold",
+        "id": 3
+      }
+    },
+    {
+      "id": "KH-0002",
+      "name": "Phan Tuấn Kiệt",
+      "dateOfBirth": "1985-06-02",
+      "gender": "0",
+      "idCard": "201781036",
+      "phone": "0908146397",
+      "email": "ghbnk156@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "name": "Platinium",
+        "id": 2
+      }
+    },
+    {
+      "id": "KH-0003",
+      "name": "Đặng Thị Hoàng Na",
+      "dateOfBirth": "1992-08-27",
+      "gender": "1",
+      "idCard": "204136781",
+      "phone": "0916178943",
+      "email": "hgyu45@gmail.com",
+      "address": "Quảng Nam",
+      "customerType": {
+        "name": "Silver",
+        "id": 4
+      }
+    },
+    {
+      "id": "KH-0004",
+      "name": "Nguyễn Thị Hồng",
+      "dateOfBirth": "1987-09-08",
+      "gender": "1",
+      "idCard": "200147033",
+      "phone": "0906142659",
+      "email": "fgyu890@yahoo.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "name": "Member",
+        "id": 5
       }
     }
   ],
@@ -168,6 +276,521 @@
     }
   ],
   "servicesList": [
-
+    {
+      "id": "DV-0001",
+      "name": "Villa 1",
+      "area": "400",
+      "floor": "3",
+      "maxPeople": "10",
+      "cost": "5000000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Năm",
+        "cost": "500000000",
+        "id": 1
+      }
+    },
+    {
+      "id": "DV-0002",
+      "name": "Villa 2",
+      "area": "420",
+      "floor": "3",
+      "maxPeople": "10",
+      "cost": "5200000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Tháng",
+        "cost": "80000000",
+        "id": 2
+      }
+    },
+    {
+      "id": "DV-0003",
+      "name": "Villa 3",
+      "area": "440",
+      "floor": "3",
+      "maxPeople": "10",
+      "cost": "5400000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Ngày",
+        "cost": "4000000",
+        "id": 3
+      }
+    },
+    {
+      "id": "DV-0004",
+      "name": "Villa 4",
+      "area": "460",
+      "floor": "3",
+      "maxPeople": "10",
+      "cost": "5600000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Giờ",
+        "cost": "800000",
+        "id": 4
+      }
+    },
+    {
+      "id": "DV-0005",
+      "name": "House 1",
+      "area": "200",
+      "floor": "2",
+      "maxPeople": "6",
+      "cost": "3500000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Năm",
+        "cost": "500000000",
+        "id": 1
+      }
+    },
+    {
+      "id": "DV-0006",
+      "name": "House 2",
+      "area": "220",
+      "floor": "2",
+      "maxPeople": "6",
+      "cost": "3700000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Tháng",
+        "cost": "80000000",
+        "id": 2
+      }
+    },
+    {
+      "id": "DV-0007",
+      "name": "House 3",
+      "area": "240",
+      "floor": "2",
+      "maxPeople": "6",
+      "cost": "3900000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Ngày",
+        "cost": "4000000",
+        "id": 3
+      }
+    },
+    {
+      "id": "DV-0008",
+      "name": "House 4",
+      "area": "260",
+      "floor": "2",
+      "maxPeople": "6",
+      "cost": "4100000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Giờ",
+        "cost": "800000",
+        "id": 4
+      }
+    },
+    {
+      "id": "DV-0009",
+      "name": "Room 1",
+      "area": "120",
+      "floor": "1",
+      "maxPeople": "3",
+      "cost": "2500000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Năm",
+        "cost": "500000000",
+        "id": 1
+      }
+    },
+    {
+      "id": "DV-0010",
+      "name": "Room 2",
+      "area": "120",
+      "floor": "1",
+      "maxPeople": "3",
+      "cost": "2600000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Tháng",
+        "cost": "80000000",
+        "id": 2
+      }
+    },
+    {
+      "id": "DV-0011",
+      "name": "Room 3",
+      "area": "120",
+      "floor": "1",
+      "maxPeople": "3",
+      "cost": "2700000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Ngày",
+        "cost": "4000000",
+        "id": 3
+      }
+    },
+    {
+      "id": "DV-0012",
+      "name": "Room 4",
+      "area": "120",
+      "floor": "1",
+      "maxPeople": "3",
+      "cost": "2800000",
+      "status": "Còn phòng",
+      "rentType": {
+        "name": "Giờ",
+        "cost": "800000",
+        "id": 4
+      }
+    }
+  ],
+  "contractList": [
+    {
+      "id": 1,
+      "startDate": "2021-12-22",
+      "endDate": "2021-12-29",
+      "deposit": "6000000",
+      "total": "15000000",
+      "employee": {
+        "id": "NV-0001",
+        "name": "Nguyễn Thành Đạt",
+        "dateOfBirth": "1965-12-04",
+        "idCard": "200146971",
+        "salary": "40000000",
+        "phone": "0914136970",
+        "email": "abcghyu123@gmail.com",
+        "address": "Hà Nội",
+        "position": {
+          "name": "Giám đốc",
+          "id": 6
+        },
+        "educationDegree": {
+          "name": "Sau đại học",
+          "id": 4
+        },
+        "division": {
+          "name": "Quản lý",
+          "id": 4
+        }
+      },
+      "customer": {
+        "id": "KH-0001",
+        "name": "Phan Bảo Hân",
+        "dateOfBirth": "1988-07-27",
+        "gender": "1",
+        "idCard": "201426720",
+        "phone": "0906514122",
+        "email": "fghju5678@gmail.com",
+        "address": "Đà Nẵng",
+        "customerType": {
+          "name": "Gold",
+          "id": 3
+        }
+      },
+      "services": {
+        "id": "DV-0001",
+        "name": "Villa 1",
+        "area": "400",
+        "floor": "3",
+        "maxPeople": "10",
+        "cost": "5000000",
+        "status": "Còn phòng",
+        "rentType": {
+          "name": "Năm",
+          "cost": "500000000",
+          "id": 1
+        }
+      }
+    },
+    {
+      "id": 2,
+      "startDate": "2021-12-18",
+      "endDate": "2021-12-23",
+      "deposit": "7500000",
+      "total": "18500000",
+      "employee": {
+        "id": "NV-0002",
+        "name": "Nguyễn Thị Ánh",
+        "dateOfBirth": "1978-06-01",
+        "idCard": "201479036",
+        "salary": "30000000",
+        "phone": "0916036178",
+        "email": "ghuui123@gmail.com",
+        "address": "Đà Nẵng",
+        "position": {
+          "name": "Quản lý",
+          "id": 5
+        },
+        "educationDegree": {
+          "name": "Đại học",
+          "id": 3
+        },
+        "division": {
+          "name": "Quản lý",
+          "id": 4
+        }
+      },
+      "customer": {
+        "id": "KH-0002",
+        "name": "Phan Tuấn Kiệt",
+        "dateOfBirth": "1985-06-02",
+        "gender": "0",
+        "idCard": "201781036",
+        "phone": "0908146397",
+        "email": "ghbnk156@gmail.com",
+        "address": "Đà Nẵng",
+        "customerType": {
+          "name": "Platinium",
+          "id": 2
+        }
+      },
+      "services": {
+        "id": "DV-0002",
+        "name": "Villa 2",
+        "area": "420",
+        "floor": "3",
+        "maxPeople": "10",
+        "cost": "5200000",
+        "status": "Còn phòng",
+        "rentType": {
+          "name": "Tháng",
+          "cost": "80000000",
+          "id": 2
+        }
+      }
+    },
+    {
+      "startDate": "2021-12-16",
+      "endDate": "2021-12-19",
+      "deposit": "4500000",
+      "total": "15000000",
+      "employee": {
+        "id": "NV-0002",
+        "name": "Nguyễn Thị Ánh",
+        "dateOfBirth": "1978-06-01",
+        "idCard": "201479036",
+        "salary": "30000000",
+        "phone": "0916036178",
+        "email": "ghuui123@gmail.com",
+        "address": "Đà Nẵng",
+        "position": {
+          "name": "Quản lý",
+          "id": 5
+        },
+        "educationDegree": {
+          "name": "Đại học",
+          "id": 3
+        },
+        "division": {
+          "name": "Quản lý",
+          "id": 4
+        }
+      },
+      "customer": {
+        "id": "KH-0002",
+        "name": "Phan Tuấn Kiệt",
+        "dateOfBirth": "1985-06-02",
+        "gender": "0",
+        "idCard": "201781036",
+        "phone": "0908146397",
+        "email": "ghbnk156@gmail.com",
+        "address": "Đà Nẵng",
+        "customerType": {
+          "name": "Platinium",
+          "id": 2
+        }
+      },
+      "services": {
+        "id": "DV-0007",
+        "name": "House 3",
+        "area": "240",
+        "floor": "2",
+        "maxPeople": "6",
+        "cost": "3900000",
+        "status": "Còn phòng",
+        "rentType": {
+          "name": "Ngày",
+          "cost": "4000000",
+          "id": 3
+        }
+      },
+      "id": 4
+    }
+  ],
+  "attachServiceList": [
+    {
+      "name": "Massage",
+      "price": "1200000",
+      "unit": "1",
+      "status": "Còn chỗ",
+      "id": 1
+    },
+    {
+      "name": "Karaoke",
+      "price": "900000",
+      "unit": "1",
+      "status": "Còn chỗ",
+      "id": 2
+    },
+    {
+      "name": "Thức ăn",
+      "price": "700000",
+      "unit": "1",
+      "status": "Còn chỗ",
+      "id": 3
+    },
+    {
+      "name": "Nước uống",
+      "price": "150000",
+      "unit": "1",
+      "status": "Còn chỗ",
+      "id": 4
+    },
+    {
+      "name": "Thuê xe tham quan resort",
+      "price": "2500000",
+      "unit": "1",
+      "status": "Còn chỗ",
+      "id": 5
+    }
+  ],
+  "contractDetailList": [
+    {
+      "contract": {
+        "startDate": "2021-12-22",
+        "endDate": "2021-12-31",
+        "deposit": "6000000",
+        "total": "15000000",
+        "employee": {
+          "id": "NV-0001",
+          "name": "Nguyễn Thành Đạt",
+          "dateOfBirth": "1965-12-04",
+          "idCard": "200146971",
+          "salary": "40000000",
+          "phone": "0914136970",
+          "email": "abcghyu123@gmail.com",
+          "address": "Hà Nội",
+          "position": {
+            "name": "Giám đốc",
+            "id": 6
+          },
+          "educationDegree": {
+            "name": "Sau đại học",
+            "id": 4
+          },
+          "division": {
+            "name": "Quản lý",
+            "id": 4
+          }
+        },
+        "customer": {
+          "id": "KH-0001",
+          "name": "Phan Bảo Hân",
+          "dateOfBirth": "1988-07-27",
+          "gender": "1",
+          "idCard": "201426720",
+          "phone": "0906514122",
+          "email": "fghju5678@gmail.com",
+          "address": "Đà Nẵng",
+          "customerType": {
+            "name": "Gold",
+            "id": 3
+          }
+        },
+        "services": {
+          "id": "DV-0001",
+          "name": "Villa 1",
+          "area": "400",
+          "floor": "3",
+          "maxPeople": "10",
+          "cost": "5000000",
+          "status": "Còn phòng",
+          "rentType": {
+            "name": "Năm",
+            "cost": "500000000",
+            "id": 1
+          }
+        },
+        "id": 1
+      },
+      "attachService": {
+        "name": "Massage",
+        "price": "1200000",
+        "unit": "1",
+        "status": "Còn chỗ",
+        "id": 1
+      },
+      "quantity": "4",
+      "id": 1
+    },
+    {
+      "contract": {
+        "startDate": "2022-01-01",
+        "endDate": "2022-01-10",
+        "deposit": "6200000",
+        "total": "15400000",
+        "employee": {
+          "id": "NV-0003",
+          "name": "Nguyễn Tiến Dũng",
+          "dateOfBirth": "1983-12-14",
+          "idCard": "200144536",
+          "salary": "20000000",
+          "phone": "0918147346",
+          "email": "kloiu78@yahoo.com",
+          "address": "Huế",
+          "position": {
+            "name": "Giám sát",
+            "id": 4
+          },
+          "educationDegree": {
+            "name": "Đại học",
+            "id": 3
+          },
+          "division": {
+            "name": "Sale - Marketing",
+            "id": 1
+          }
+        },
+        "customer": {
+          "id": "KH-0003",
+          "name": "Đặng Thị Hoàng Na",
+          "dateOfBirth": "1992-08-27",
+          "gender": "1",
+          "idCard": "204136781",
+          "phone": "0916178943",
+          "email": "hgyu45@gmail.com",
+          "address": "Quảng Nam",
+          "customerType": {
+            "name": "Silver",
+            "id": 4
+          }
+        },
+        "services": {
+          "id": "DV-0005",
+          "name": "House 1",
+          "area": "200",
+          "floor": "2",
+          "maxPeople": "6",
+          "cost": "3500000",
+          "status": "Còn phòng",
+          "rentType": {
+            "name": "Năm",
+            "cost": "500000000",
+            "id": 1
+          }
+        },
+        "id": 3
+      },
+      "attachService": {
+        "name": "Nước uống",
+        "price": "150000",
+        "unit": "1",
+        "status": "Còn chỗ",
+        "id": 4
+      },
+      "quantity": "2",
+      "id": 2
+    }
   ]
 }

@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Details employee</h2>
+<div mat-dialog-content>
+  <table class="table table-hover table-striped">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Id</td>
+      <td>{{customer.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{customer.name}}</td>
+    </tr>
+    <tr>
+      <td>Date of birth</td>
+      <td>{{customer.dateOfBirth | date: 'dd-MM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{customer.gender}}</td>
+    </tr>
+    <tr>
+      <td>Id card</td>
+      <td>{{customer.idCard}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{customer.phone}}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{customer.email}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{customer.address}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Customer type</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{customer.customerType.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{customer.customerType.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-light">Close</button>
+</mat-dialog-actions>

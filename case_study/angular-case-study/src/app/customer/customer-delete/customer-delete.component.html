@@ -1,6 +1,6 @@
-<h2>Edit employee</h2>
-<div class="col-6">
-  <form [formGroup]="customerForm" (ngSubmit)="deleteCustomer(id)" novalidate>
+<h2 mat-dialog-title>Delete employee</h2>
+<div mat-dialog-content>
+  <form [formGroup]="customerForm" (ngSubmit)="deleteCustomer(id)">
     <div class="row mb-3">
       <div class="col-4">
         <label for="id" class="form-label">Id</label>
@@ -72,16 +72,19 @@
         <label for="customerType" class="form-label">Customer type</label>
       </div>
       <div class="col-8">
-        <select id="customerType" name="customerType" formControlName="customerType" aria-describedby="customerTypeError">
-          <option *ngFor="let customerType of customerTypeList" [ngValue]="customerType" [selected]="customerType.id">{{customerType.name}}</option>
+        <select [compareWith]="compareCustomerType" id="customerType" name="customerType" formControlName="customerType"
+                aria-describedby="customerTypeError">
+          <option *ngFor="let customerType of customerTypeList" [ngValue]="customerType">{{customerType.name}}</option>
         </select>
       </div>
     </div>
     <div class="row mb-3">
       <div class="col-4"></div>
-      <div class="col-4">
-        <button type="submit" class="btn btn-primary" [disabled]="!customerForm.valid">Delete</button>
-        <button type="submit" class="btn btn-secondary" routerLink="/customer/list">Cancel</button>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" [mat-dialog-close]="true">Delete</button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
       </div>
     </div>
   </form>

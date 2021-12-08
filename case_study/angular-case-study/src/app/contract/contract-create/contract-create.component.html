@@ -1,0 +1,135 @@
+<h2 mat-dialog-title>Create contract</h2>
+<div mat-dialog-content>
+  <form [formGroup]="contractForm" (ngSubmit)="saveContract()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="startDate" class="form-label">Start date</label>
+      </div>
+      <div class="col-8">
+        <input type="date" class="form-control" id="startDate" formControlName="startDate"
+               aria-describedby="startDateError">
+        <div id="startDateError" class="form-text text-danger"
+             *ngIf="!startDate.valid && (startDate.dirty || startDate.touched)">
+          <div [hidden]="!startDate.errors.required">
+            Ngày bắt đầu hợp đồng không được để trống!!!
+          </div>
+          <div [hidden]="!startDate.errors.pattern">
+            Ngày bắt đầu hợp đồng phải có định dạng là DD/MM/YYYY
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="endDate" class="form-label">End date</label>
+      </div>
+      <div class="col-8">
+        <input type="date" class="form-control" id="endDate" formControlName="endDate"
+               aria-describedby="endDateError">
+        <div id="endDateError" class="form-text text-danger"
+             *ngIf="!endDate.valid && (endDate.dirty || endDate.touched)">
+          <div [hidden]="!endDate.errors.required">
+            Ngày kết thúc hợp đồng không được để trống!!!
+          </div>
+          <div [hidden]="!endDate.errors.pattern">
+            Ngày kết thúc hợp đồng phải có định dạng là DD/MM/YYYY
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="deposit" class="form-label">Deposit</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="deposit" formControlName="deposit" aria-describedby="depositError">
+        <div id="depositError" class="form-text text-danger"
+             *ngIf="!deposit.valid && (deposit.dirty || deposit.touched)">
+          <div [hidden]="!deposit.errors.nan">
+            Tiền đặt cọc phải là số!!!
+          </div>
+          <div [hidden]="!deposit.errors.zero">
+            Tiền đặt cọc phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="total" class="form-label">Total</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="total" formControlName="total" aria-describedby="totalError">
+        <div id="totalError" class="form-text text-danger" *ngIf="!total.valid && (total.dirty || total.touched)">
+          <div [hidden]="!total.errors.nan">
+            Tổng tiền phải là số!!!
+          </div>
+          <div [hidden]="!total.errors.zero">
+            Tổng tiền phải là số dương!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="employee" class="form-label">Employee</label>
+      </div>
+      <div class="col-8">
+        <select id="employee" name="employee" formControlName="employee"
+                aria-describedby="employeeError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let employee of employeeList" [ngValue]="employee">{{employee.name}}</option>
+        </select>
+        <div id="employeeError" class="form-text text-danger"
+             *ngIf="!employee.valid && (employee.dirty || employee.touched)">
+          Nhân viên không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="customer" class="form-label">Customer</label>
+      </div>
+      <div class="col-8">
+        <select id="customer" name="customer" formControlName="customer"
+                aria-describedby="customerError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let customer of customerList" [ngValue]="customer">{{customer.name}}</option>
+        </select>
+        <div id="customerError" class="form-text text-danger"
+             *ngIf="!customer.valid && (customer.dirty || customer.touched)">
+          Khách hàng không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="services" class="form-label">Services</label>
+      </div>
+      <div class="col-8">
+        <select id="services" name="services" formControlName="services"
+                aria-describedby="servicesError">
+          <option value="" selected>---Select---</option>
+          <option *ngFor="let services of servicesList" [ngValue]="services">{{services.name}}</option>
+        </select>
+        <div id="servicesError" class="form-text text-danger"
+             *ngIf="!services.valid && (services.dirty || services.touched)">
+          Dịch vụ không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" [mat-dialog-close]="true"
+                  [disabled]="!contractForm.valid">Create
+          </button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
+      </div>
+    </div>
+  </form>
+</div>
+
+

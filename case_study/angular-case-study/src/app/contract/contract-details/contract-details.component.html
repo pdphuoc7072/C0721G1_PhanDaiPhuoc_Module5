@@ -1,0 +1,151 @@
+<h2 mat-dialog-title>Details contract</h2>
+<div mat-dialog-content>
+  <table class="table table-hover table-striped">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Start date</td>
+      <td>{{contract.startDate}}</td>
+    </tr>
+    <tr>
+      <td>End date</td>
+      <td>{{contract.endDate}}</td>
+    </tr>
+    <tr>
+      <td>Deposit</td>
+      <td>{{contract.deposit}}</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>{{contract.total}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Employee</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{contract.employee.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{contract.employee.name}}</td>
+    </tr>
+    <tr>
+      <td>Date of birth</td>
+      <td>{{contract.employee.dateOfBirth | date: 'dd-MM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Id card</td>
+      <td>{{contract.employee.idCard}}</td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td>{{contract.employee.salary}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{contract.employee.phone}}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{contract.employee.email}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{contract.employee.address}}</td>
+    </tr>
+    <tr>
+      <td>Position</td>
+      <td>{{contract.employee.position.name}}</td>
+    </tr>
+    <tr>
+      <td>Education degree</td>
+      <td>{{contract.employee.educationDegree.name}}</td>
+    </tr>
+    <tr>
+      <td>Division</td>
+      <td>{{contract.employee.division.name}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Customer</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{contract.customer.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{contract.customer.name}}</td>
+    </tr>
+    <tr>
+      <td>Date of birth</td>
+      <td>{{contract.customer.dateOfBirth | date: 'dd-MM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{contract.customer.gender}}</td>
+    </tr>
+    <tr>
+      <td>Id card</td>
+      <td>{{contract.customer.idCard}}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>{{contract.customer.phone}}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{contract.customer.email}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{contract.customer.address}}</td>
+    </tr>
+    <tr>
+      <td>Customer type</td>
+      <td>{{contract.customer.customerType.name}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Services</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{contract.services.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{contract.services.name}}</td>
+    </tr>
+    <tr>
+      <td>Area</td>
+      <td>{{contract.services.area}}</td>
+    </tr>
+    <tr>
+      <td>Floor</td>
+      <td>{{contract.services.floor}}</td>
+    </tr>
+    <tr>
+      <td>Max people</td>
+      <td>{{contract.services.maxPeople}}</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>{{contract.services.cost}}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{contract.services.status}}</td>
+    </tr>
+    <tr>
+      <td>Rent type</td>
+      <td>{{contract.services.rentType.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-light">Close</button>
+</mat-dialog-actions>
+
+
