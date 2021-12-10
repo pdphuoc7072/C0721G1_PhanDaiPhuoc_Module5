@@ -8,6 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesDetailsComponent } from './services/services-details/services-details.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {ConfirmDialogModule} from './confirm-dialog/confirm-dialog.module';
+import {ConfirmDeleteDialogComponent} from './confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     SharedModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ConfirmDialogModule
+  ],
+  entryComponents: [
+    ConfirmDeleteDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,69 @@
+<h2 mat-dialog-title>Details contract-detail</h2>
+<div mat-dialog-content>
+  <table class="table table-hover table-striped">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Id</td>
+      <td>{{contractDetail.id}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Contract</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{contractDetail.contract.id}}</td>
+    </tr>
+    <tr>
+      <td>Start date</td>
+      <td>{{contractDetail.contract.startDate}}</td>
+    </tr>
+    <tr>
+      <td>End date</td>
+      <td>{{contractDetail.contract.endDate}}</td>
+    </tr>
+    <tr>
+      <td>Deposit</td>
+      <td>{{contractDetail.contract.deposit}}</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>{{contractDetail.contract.total}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase">Attach service</td>
+    </tr>
+    <tr>
+      <td>Id</td>
+      <td>{{contractDetail.attachService.id}}</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{contractDetail.attachService.name}}</td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>{{contractDetail.attachService.price}}</td>
+    </tr>
+    <tr>
+      <td>Unit</td>
+      <td>{{contractDetail.attachService.unit}}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{contractDetail.attachService.status}}</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="fw-bold text-uppercase"></td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td>{{contractDetail.quantity}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-light">Close</button>
+</mat-dialog-actions>

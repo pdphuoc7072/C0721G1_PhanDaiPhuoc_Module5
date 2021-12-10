@@ -7,14 +7,17 @@ import { ContractDetailListComponent } from './contract-detail-list/contract-det
 import { ContractDetailCreateComponent } from './contract-detail-create/contract-detail-create.component';
 import { ContractDetailEditComponent } from './contract-detail-edit/contract-detail-edit.component';
 import { ContractDetailDeleteComponent } from './contract-detail-delete/contract-detail-delete.component';
+import { ContractDetailDetailsComponent } from './contract-detail-details/contract-detail-details.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [ContractDetailListComponent, ContractDetailCreateComponent, ContractDetailEditComponent, ContractDetailDeleteComponent],
-  imports: [
-    CommonModule,
-    ContractDetailRoutingModule,
-    ReactiveFormsModule
-  ]
+  declarations: [ContractDetailListComponent, ContractDetailCreateComponent, ContractDetailEditComponent, ContractDetailDeleteComponent, ContractDetailDetailsComponent],
+    imports: [
+        CommonModule,
+        ContractDetailRoutingModule,
+        ReactiveFormsModule,
+        MatDialogModule
+    ]
 })
 export class ContractDetailModule { }

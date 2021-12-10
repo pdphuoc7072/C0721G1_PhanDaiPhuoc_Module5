@@ -40,7 +40,7 @@ export class ContractEditComponent implements OnInit {
               private customerService: CustomerService,
               private servicesService: ServicesService,
               @Inject(MAT_DIALOG_DATA) id: number,
-              private dialog: MatDialogRef<ContractEditComponent>) {
+              private matDialogRef: MatDialogRef<ContractEditComponent>) {
     this.id = id;
     this.getContract(id);
   }
@@ -72,7 +72,7 @@ export class ContractEditComponent implements OnInit {
   updateContract(id: number) {
     const contract = this.contractForm.value;
     this.contractService.update(id, contract).subscribe(() => {
-      this.dialog.close();
+      this.matDialogRef.close();
     }, error => {
       console.log(error);
     });

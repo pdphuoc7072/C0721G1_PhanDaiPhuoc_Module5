@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {gte} from '../../util/gte.validator';
 import {Contract} from '../../model/contract';
@@ -7,6 +7,8 @@ import {ContractDetailService} from '../../service/contract-detail.service';
 import {ContractService} from '../../service/contract.service';
 import {AttachServiceService} from '../../service/attach-service.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {ConfirmDeleteDialogComponent} from '../../confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 
 @Component({
   selector: 'app-contract-detail-delete',
@@ -28,12 +30,11 @@ export class ContractDetailDeleteComponent implements OnInit {
   constructor(private contractDetailService: ContractDetailService,
               private contractService: ContractService,
               private attachServiceService: AttachServiceService,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = +paramMap.get('id');
-      this.getContractDetail(this.id);
-    });
+              @Inject(MAT_DIALOG_DATA) id: number,
+              private matDialogRef: MatDialogRef<ContractDetailDeleteComponent>,
+              private matDialog: MatDialog) {
+   this.id = id;
+   this.getContractDetail(id);
   }
 
   ngOnInit(): void {
@@ -68,11 +69,20 @@ export class ContractDetailDeleteComponent implements OnInit {
   }
 
   deleteContractDetail(id: number) {
-    this.contractDetailService.delete(id).subscribe(() => {
-      this.router.navigate(['contract-detail/list']);
-    }, error => {
-      console.log(error);
+    const dialogConfirm = this.matDialog.open(ConfirmDeleteDialogComponent, {
+      data: {
+        title: 'Confirm Delete',
+        message: 'Are you sure to delete a contract-detail with id: ' + id + ' ?'
+      }
+    });
+    dialogConfirm.beforeClosed().subscribe(result => {
+      if (result === true) {
+        this.contractDetailService.delete(id).subscribe(() => {
+          this.matDialogRef.close();
+        }, error => {
+          console.log(error);
+        });
+      }
     });
   }
-
 }

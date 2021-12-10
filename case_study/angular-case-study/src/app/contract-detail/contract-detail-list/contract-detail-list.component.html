@@ -1,5 +1,5 @@
 <h1>Contract detail list</h1>
-<a routerLink="/contract-detail/create">Create new contract detail</a>
+<button mat-button (click)="openDialogCreate()" class="btn btn-primary">Create new contract detail</button>
 <table class="table table-hover table-striped">
   <thead>
   <tr>
@@ -7,6 +7,7 @@
     <th scope="col">Contract Id</th>
     <th scope="col">Attach service name</th>
     <th scope="col">Quantity</th>
+    <th scope="col">Details</th>
     <th scope="col">Edit</th>
     <th scope="col">Delete</th>
   </tr>
@@ -18,10 +19,12 @@
     <td>{{contractDetail.attachService.name}}</td>
     <td>{{contractDetail.quantity}}</td>
     <td>
-      <a [routerLink]="['/contract-detail/edit', contractDetail.id]">Edit</a>
-    </td>
+      <button mat-button (click)="openDialogDetails(contractDetail.id)" class="btn btn-primary"><i class="fas fa-info-circle"></i></button>
+    </td><td>
+    <button mat-button (click)="openDialogEdit(contractDetail.id)" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+  </td>
     <td>
-      <a [routerLink]="['/contract-detail/delete', contractDetail.id]">Delete</a>
+      <button mat-button (click)="openDialogDelete(contractDetail.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
     </td>
   </tr>
   </tbody>

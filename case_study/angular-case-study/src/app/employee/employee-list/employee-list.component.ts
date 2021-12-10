@@ -1,11 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {Employee} from '../../model/employee';
+import {Position} from '../../model/position';
 import {EmployeeService} from '../../service/employee.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EmployeeCreateComponent} from '../employee-create/employee-create.component';
 import {EmployeeEditComponent} from '../employee-edit/employee-edit.component';
 import {EmployeeDeleteComponent} from '../employee-delete/employee-delete.component';
 import {EmployeeDetailsComponent} from '../employee-details/employee-details.component';
+import {FormControl, FormGroup} from '@angular/forms';
+import {PositionService} from '../../service/position.service';
 
 @Component({
   selector: 'app-employee-list',
@@ -15,13 +18,24 @@ import {EmployeeDetailsComponent} from '../employee-details/employee-details.com
 export class EmployeeListComponent implements OnInit {
 
   employeeList: Employee[] = [];
+  positionList: Position[] = [];
+  p = 1;
+
+  employeeSearchForm = new FormGroup({
+    nameSearch: new FormControl(''),
+    phoneSearch: new FormControl(''),
+    positionSearch: new FormControl('')
+  });
+
 
   constructor(private employeeService: EmployeeService,
+              private positionService: PositionService,
               private matDialog: MatDialog) {
   }
 
   ngOnInit(): void {
     this.getAllEmployee();
+    this.getAllPosition();
   }
 
   openDialogDetails(id) {
@@ -57,4 +71,18 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  searchEmployee() {
+    this.employeeService.search(this.employeeSearchForm.value).subscribe(value => {
+      this.employeeList = value;
+      this.employeeSearchForm.reset();
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  getAllPosition() {
+    this.positionService.getAll().subscribe(value => {
+      this.positionList = value;
+    });
+  }
 }

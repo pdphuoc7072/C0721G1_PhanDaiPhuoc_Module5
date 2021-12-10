@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Delete employee</h2>
 <div mat-dialog-content>
-  <form [formGroup]="employeeForm" (ngSubmit)="deleteEmployee(id)">
+  <form [formGroup]="employeeForm">
     <div class="row mb-3">
       <div class="col-4">
         <label for="id" class="form-label">Id</label>
@@ -106,7 +106,7 @@
       <div class="col-4"></div>
       <div class="col-8">
         <mat-dialog-actions>
-          <button mat-button type="submit" class="btn btn-primary">Delete</button>
+          <button mat-button type="submit" class="btn btn-primary" (click)="deleteEmployee(id)">Delete</button>
           <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
         </mat-dialog-actions>
       </div>

@@ -7,8 +7,9 @@ import {ContractService} from '../../service/contract.service';
 import {EmployeeService} from '../../service/employee.service';
 import {CustomerService} from '../../service/customer.service';
 import {ServicesService} from '../../service/services.service';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {Router} from '@angular/router';
+import {ConfirmDeleteDialogComponent} from '../../confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 
 @Component({
   selector: 'app-contract-delete',
@@ -37,7 +38,8 @@ export class ContractDeleteComponent implements OnInit {
               private customerService: CustomerService,
               private servicesService: ServicesService,
               @Inject(MAT_DIALOG_DATA) id: number,
-              private dialog: MatDialogRef<ContractDeleteComponent>) {
+              private matDialogRef: MatDialogRef<ContractDeleteComponent>,
+              private matDialog: MatDialog) {
     this.id = id;
     this.getContract(id);
   }
@@ -67,10 +69,20 @@ export class ContractDeleteComponent implements OnInit {
   }
 
   deleteContract(id: number) {
-    this.contractService.delete(id).subscribe(() => {
-      this.dialog.close();
-    }, error => {
-      console.log(error);
+    const dialogConfirm = this.matDialog.open(ConfirmDeleteDialogComponent, {
+      data: {
+        title: 'Confirm Delete',
+        message: 'Are you sure to delete a contract with id: ' + id + ' ?'
+      }
+    });
+    dialogConfirm.beforeClosed().subscribe(result => {
+      if (result === true) {
+        this.contractService.delete(id).subscribe(() => {
+          this.matDialogRef.close();
+        }, error => {
+          console.log(error);
+        });
+      }
     });
   }
 

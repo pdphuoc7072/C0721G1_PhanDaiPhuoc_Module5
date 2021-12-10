@@ -1,5 +1,16 @@
 <h1>Employee list</h1>
 <button mat-button (click)="openDialogCreate()" class="btn btn-primary">Create new employee</button>
+<div class="row">
+  <form [formGroup]="employeeSearchForm" (ngSubmit)="searchEmployee()">
+    <input type="text" name="nameSearch" placeholder="Enter name" formControlName="nameSearch">
+    <input type="text" name="phoneSearch" placeholder="Enter phone" formControlName="phoneSearch">
+    <select id="position" name="position" formControlName="positionSearch">
+      <option value="" selected>---Select position---</option>
+      <option *ngFor="let position of positionList" [ngValue]="position">{{position.name}}</option>
+    </select>
+    <button type="submit">Search</button>
+  </form>
+</div>
 <table class="table table-hover table-striped">
   <thead>
   <tr>
@@ -21,7 +32,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let employee of employeeList; index as i">
+  <tr *ngFor="let employee of employeeList | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
     <th>{{i + 1}}</th>
     <td>{{employee.id}}</td>
     <td>{{employee.name}}</td>
@@ -49,3 +60,4 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

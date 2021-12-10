@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Employee} from '../model/employee';
 
@@ -32,5 +32,14 @@ export class EmployeeService {
 
   delete(id: string): Observable<Employee> {
     return this.httpClient.delete<Employee>(`${API_URL}/employeeList/${id}`);
+  }
+
+  search(employee: any): Observable<Employee[]> {
+    if (employee.positionSearch === '') {
+      return this.httpClient.get<Employee[]>(`${API_URL}/employeeList?name_like=${employee.nameSearch}&phone_like=${employee.phoneSearch}`);
+    } else {
+      // tslint:disable-next-line:max-line-length
+      return this.httpClient.get<Employee[]>(`${API_URL}/employeeList?name_like=${employee.nameSearch}&phone_like=${employee.phoneSearch}&position.id=${employee.positionSearch.id}`);
+    }
   }
 }

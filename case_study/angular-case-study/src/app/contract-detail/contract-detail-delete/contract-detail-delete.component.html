@@ -1,5 +1,5 @@
-<h2>Edit contract detail</h2>
-<div class="col-6">
+<h2 mat-dialog-title>Delete contract detail</h2>
+<div mat-dialog-content>
   <form [formGroup]="contractDetailForm" (ngSubmit)="deleteContractDetail(id)">
     <div class="row mb-3">
       <div class="col-4">
@@ -31,9 +31,11 @@
     </div>
     <div class="row mb-3">
       <div class="col-4"></div>
-      <div class="col-4">
-        <button type="submit" class="btn btn-primary">Delete</button>
-        <button type="submit" class="btn btn-secondary" routerLink="/contract-detail/list">Cancel</button>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary">Delete</button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
       </div>
     </div>
   </form>

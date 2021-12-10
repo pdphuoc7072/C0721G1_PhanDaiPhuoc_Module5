@@ -40,7 +40,7 @@ export class ContractCreateComponent implements OnInit {
               private employeeService: EmployeeService,
               private servicesService: ServicesService,
               private customerService: CustomerService,
-              private dialog: MatDialogRef<ContractCreateComponent>) {
+              private matDialogRef: MatDialogRef<ContractCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -52,7 +52,7 @@ export class ContractCreateComponent implements OnInit {
   saveContract() {
     const contract = this.contractForm.value;
     this.contractService.save(contract).subscribe(() => {
-      this.dialog.close();
+      this.matDialogRef.close();
     }, error => {
       console.log(error);
     });

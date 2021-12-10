@@ -7,6 +7,7 @@ import {AttachServiceService} from '../../service/attach-service.service';
 import {Router} from '@angular/router';
 import {Contract} from '../../model/contract';
 import {AttachService} from '../../model/attach-service';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contract-detail-create',
@@ -27,7 +28,7 @@ export class ContractDetailCreateComponent implements OnInit {
   constructor(private contractDetailService: ContractDetailService,
               private contractService: ContractService,
               private attachServiceService: AttachServiceService,
-              private router: Router) {
+              private matDialogRef: MatDialogRef<ContractDetailCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -50,7 +51,7 @@ export class ContractDetailCreateComponent implements OnInit {
   saveContractDetail() {
     const contractDetail = this.contractDetailForm.value;
     this.contractDetailService.save(contractDetail).subscribe(() => {
-      this.router.navigate(['contract-detail/list']);
+      this.matDialogRef.close();
     }, error => {
       console.log(error);
     });

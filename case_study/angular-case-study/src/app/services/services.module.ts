@@ -8,6 +8,7 @@ import { ServicesCreateComponent } from './services-create/services-create.compo
 import { ServicesEditComponent } from './services-edit/services-edit.component';
 import { ServicesDeleteComponent } from './services-delete/services-delete.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     ServicesRoutingModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxPaginationModule
   ]
 })
 export class ServicesModule { }

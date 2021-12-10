@@ -14,6 +14,7 @@ import {ServicesDetailsComponent} from '../services-details/services-details.com
 })
 export class ServicesListComponent implements OnInit {
 
+  p = 1;
   servicesList: Services[] = [];
 
   constructor(private servicesService: ServicesService,

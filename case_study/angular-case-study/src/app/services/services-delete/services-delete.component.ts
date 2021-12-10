@@ -3,9 +3,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {RentType} from '../../model/rent-type';
 import {ServicesService} from '../../service/services.service';
 import {RentTypeService} from '../../service/rent-type.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {gte} from '../../util/gte.validator';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {ConfirmDeleteDialogComponent} from '../../confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 
 @Component({
   selector: 'app-services-delete',
@@ -30,7 +29,8 @@ export class ServicesDeleteComponent implements OnInit {
   constructor(private servicesService: ServicesService,
               private rentTypeService: RentTypeService,
               @Inject(MAT_DIALOG_DATA) id: string,
-              private dialog: MatDialogRef<ServicesDeleteComponent>) {
+              private matDialogRef: MatDialogRef<ServicesDeleteComponent>,
+              private matDialog: MatDialog) {
     this.id = id;
     this.getServices(id);
   }
@@ -50,10 +50,20 @@ export class ServicesDeleteComponent implements OnInit {
   }
 
   deleteServices(id: string) {
-    this.servicesService.delete(id).subscribe(() => {
-      this.dialog.close();
-    }, error => {
-      console.log(error);
+    const dialogConfirm = this.matDialog.open(ConfirmDeleteDialogComponent, {
+      data: {
+        title: 'Confirm Delete',
+        message: 'Are you sure to delete a services with id: ' + id + ' ?'
+      }
+    });
+    dialogConfirm.beforeClosed().subscribe(result => {
+      if (result === true) {
+        this.servicesService.delete(id).subscribe(() => {
+          this.matDialogRef.close();
+        }, error => {
+          console.log(error);
+        });
+      }
     });
   }
 

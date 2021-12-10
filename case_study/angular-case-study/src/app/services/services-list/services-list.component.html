@@ -18,7 +18,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let services of servicesList; index as i">
+  <tr *ngFor="let services of servicesList | paginate: { itemsPerPage: 3, currentPage: p }; index as i">
     <th>{{i + 1}}</th>
     <td>{{services.id}}</td>
     <td>{{services.name}}</td>
@@ -39,4 +39,5 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 

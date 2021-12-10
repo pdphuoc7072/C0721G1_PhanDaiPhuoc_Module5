@@ -9,6 +9,7 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeDeleteComponent } from './employee-delete/employee-delete.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
         CommonModule,
         EmployeeRoutingModule,
         ReactiveFormsModule,
-        MatDialogModule
+        MatDialogModule,
+        NgxPaginationModule
     ]
 })
 export class EmployeeModule { }
