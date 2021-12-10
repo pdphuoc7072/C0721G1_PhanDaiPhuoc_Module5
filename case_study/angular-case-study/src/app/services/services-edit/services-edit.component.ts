@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {RentType} from '../../model/rent-type';
 import {ServicesService} from '../../service/services.service';
 import {RentTypeService} from '../../service/rent-type.service';
 import {gte} from '../../util/gte.validator';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-services-edit',
@@ -28,12 +29,10 @@ export class ServicesEditComponent implements OnInit {
 
   constructor(private servicesService: ServicesService,
               private rentTypeService: RentTypeService,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = paramMap.get('id');
-      this.getServices(this.id);
-    });
+              @Inject(MAT_DIALOG_DATA) id: string,
+              private dialog: MatDialogRef<ServicesEditComponent>) {
+    this.id = id;
+    this.getServices(id);
   }
 
   ngOnInit(): void {
@@ -53,7 +52,7 @@ export class ServicesEditComponent implements OnInit {
   updateServices(id: string) {
     const services = this.servicesForm.value;
     this.servicesService.update(id, services).subscribe(() => {
-      this.router.navigate(['/services/list']);
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

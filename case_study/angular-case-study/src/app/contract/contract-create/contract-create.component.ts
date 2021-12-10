@@ -11,6 +11,7 @@ import {Services} from '../../model/services';
 import {ContractService} from '../../service/contract.service';
 import {EmployeeService} from '../../service/employee.service';
 import {ServicesService} from '../../service/services.service';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contract-create',
@@ -38,7 +39,8 @@ export class ContractCreateComponent implements OnInit {
   constructor(private contractService: ContractService,
               private employeeService: EmployeeService,
               private servicesService: ServicesService,
-              private customerService: CustomerService) {
+              private customerService: CustomerService,
+              private dialog: MatDialogRef<ContractCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -50,6 +52,7 @@ export class ContractCreateComponent implements OnInit {
   saveContract() {
     const contract = this.contractForm.value;
     this.contractService.save(contract).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

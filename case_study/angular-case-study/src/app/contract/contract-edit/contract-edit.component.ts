@@ -9,7 +9,7 @@ import {EmployeeService} from '../../service/employee.service';
 import {ServicesService} from '../../service/services.service';
 import {CustomerService} from '../../service/customer.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contract-edit',
@@ -40,7 +40,7 @@ export class ContractEditComponent implements OnInit {
               private customerService: CustomerService,
               private servicesService: ServicesService,
               @Inject(MAT_DIALOG_DATA) id: number,
-              private router: Router) {
+              private dialog: MatDialogRef<ContractEditComponent>) {
     this.id = id;
     this.getContract(id);
   }
@@ -72,6 +72,7 @@ export class ContractEditComponent implements OnInit {
   updateContract(id: number) {
     const contract = this.contractForm.value;
     this.contractService.update(id, contract).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

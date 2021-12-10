@@ -8,20 +8,8 @@ import {ServicesDeleteComponent} from './services-delete/services-delete.compone
 
 const routes: Routes = [
   {
-    path: 'list',
+    path: '',
     component: ServicesListComponent
-  },
-  {
-    path: 'create',
-    component: ServicesCreateComponent
-  },
-  {
-    path: 'edit/:id',
-    component: ServicesEditComponent
-  },
-  {
-    path: 'delete/:id',
-    component: ServicesDeleteComponent
   }
 ];
 

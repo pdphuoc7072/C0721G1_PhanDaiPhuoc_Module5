@@ -7,7 +7,7 @@ import {ContractService} from '../../service/contract.service';
 import {EmployeeService} from '../../service/employee.service';
 import {CustomerService} from '../../service/customer.service';
 import {ServicesService} from '../../service/services.service';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {Router} from '@angular/router';
 
 @Component({
@@ -37,7 +37,7 @@ export class ContractDeleteComponent implements OnInit {
               private customerService: CustomerService,
               private servicesService: ServicesService,
               @Inject(MAT_DIALOG_DATA) id: number,
-              private router: Router) {
+              private dialog: MatDialogRef<ContractDeleteComponent>) {
     this.id = id;
     this.getContract(id);
   }
@@ -68,7 +68,7 @@ export class ContractDeleteComponent implements OnInit {
 
   deleteContract(id: number) {
     this.contractService.delete(id).subscribe(() => {
-      this.router.navigate(['contract']);
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

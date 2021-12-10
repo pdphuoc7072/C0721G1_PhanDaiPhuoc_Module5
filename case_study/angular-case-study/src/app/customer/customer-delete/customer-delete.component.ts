@@ -4,7 +4,7 @@ import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer-delete',
@@ -29,7 +29,8 @@ export class CustomerDeleteComponent implements OnInit {
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
-              @Inject(MAT_DIALOG_DATA) id: string) {
+              @Inject(MAT_DIALOG_DATA) id: string,
+              private dialog: MatDialogRef<CustomerDeleteComponent>) {
     this.id = id;
     this.getCustomer(id);
   }
@@ -50,6 +51,7 @@ export class CustomerDeleteComponent implements OnInit {
 
   deleteCustomer(id: string) {
     this.customerService.delete(id).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

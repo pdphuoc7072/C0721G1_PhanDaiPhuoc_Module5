@@ -5,6 +5,7 @@ import {gte} from '../../util/gte.validator';
 import {RentType} from '../../model/rent-type';
 import {ServicesService} from '../../service/services.service';
 import {RentTypeService} from '../../service/rent-type.service';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-services-create',
@@ -28,7 +29,7 @@ export class ServicesCreateComponent implements OnInit {
 
   constructor(private servicesService: ServicesService,
               private rentTypeService: RentTypeService,
-              private router: Router) {
+              private dialog: MatDialogRef<ServicesCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -38,7 +39,7 @@ export class ServicesCreateComponent implements OnInit {
   saveServices() {
     const services = this.servicesForm.value;
     this.servicesService.save(services).subscribe(() => {
-      this.router.navigate(['services/list']);
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

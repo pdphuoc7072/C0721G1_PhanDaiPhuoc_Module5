@@ -7,6 +7,7 @@ import { ServicesListComponent } from './services-list/services-list.component';
 import { ServicesCreateComponent } from './services-create/services-create.component';
 import { ServicesEditComponent } from './services-edit/services-edit.component';
 import { ServicesDeleteComponent } from './services-delete/services-delete.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ServicesDeleteComponent } from './services-delete/services-delete.compo
   imports: [
     CommonModule,
     ServicesRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ]
 })
 export class ServicesModule { }

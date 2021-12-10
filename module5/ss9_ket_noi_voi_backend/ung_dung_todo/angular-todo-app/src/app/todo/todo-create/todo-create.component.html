@@ -1,0 +1,12 @@
+<h2>Create todo</h2>
+<form [formGroup]="todoForm" (ngSubmit)="saveTodo()">
+  <table>
+    <tr>
+      <td>Content:</td>
+      <td>
+        <input type="text" formControlName="content">
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Create</button>
+</form>

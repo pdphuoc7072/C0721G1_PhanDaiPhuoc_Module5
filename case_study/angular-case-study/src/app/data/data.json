@@ -408,7 +408,7 @@
       "area": "120",
       "floor": "1",
       "maxPeople": "3",
-      "cost": "2600000",
+      "cost": "2700000",
       "status": "Còn phòng",
       "rentType": {
         "name": "Tháng",
@@ -422,7 +422,7 @@
       "area": "120",
       "floor": "1",
       "maxPeople": "3",
-      "cost": "2700000",
+      "cost": "2710000",
       "status": "Còn phòng",
       "rentType": {
         "name": "Ngày",
@@ -436,7 +436,7 @@
       "area": "120",
       "floor": "1",
       "maxPeople": "3",
-      "cost": "2800000",
+      "cost": "2870000",
       "status": "Còn phòng",
       "rentType": {
         "name": "Giờ",

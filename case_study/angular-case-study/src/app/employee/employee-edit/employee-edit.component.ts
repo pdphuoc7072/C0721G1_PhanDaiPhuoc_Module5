@@ -8,7 +8,7 @@ import {PositionService} from '../../service/position.service';
 import {EducationDegreeService} from '../../service/education-degree.service';
 import {DivisionService} from '../../service/division.service';
 import {gte} from '../../util/gte.validator';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-edit',
@@ -40,7 +40,8 @@ export class EmployeeEditComponent implements OnInit {
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
               private divisionService: DivisionService,
-              @Inject(MAT_DIALOG_DATA) id: string) {
+              @Inject(MAT_DIALOG_DATA) id: string,
+              private dialog: MatDialogRef<EmployeeEditComponent>) {
     this.id = id;
     this.getEmployee(id);
   }
@@ -72,6 +73,7 @@ export class EmployeeEditComponent implements OnInit {
   updateEmployee(id: string) {
     const employee = this.employeeForm.value;
     this.employeeService.update(id, employee).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

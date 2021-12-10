@@ -1,5 +1,5 @@
-<h2>Edit services</h2>
-<div class="col-6">
+<h2 mat-dialog-title>Edit services</h2>
+<div mat-dialog-content>
   <form [formGroup]="servicesForm" (ngSubmit)="deleteServices(id)">
     <div class="row mb-3">
       <div class="col-4">
@@ -70,9 +70,11 @@
     </div>
     <div class="row mb-3">
       <div class="col-4"></div>
-      <div class="col-4">
-        <button type="submit" class="btn btn-primary">Delete</button>
-        <button type="submit" class="btn btn-secondary" routerLink="/services/list">Cancel</button>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary">Delete</button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
       </div>
     </div>
   </form>

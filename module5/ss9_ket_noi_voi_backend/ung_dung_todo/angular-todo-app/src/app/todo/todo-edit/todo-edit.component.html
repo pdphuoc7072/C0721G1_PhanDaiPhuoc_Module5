@@ -1,0 +1,12 @@
+<h2>Edit todo</h2>
+<form [formGroup]="todoForm" (ngSubmit)="updateTodo(id)">
+  <table>
+    <tr>
+      <td>Content:</td>
+      <td>
+        <input type="text" formControlName="content">
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Update</button>
+</form>

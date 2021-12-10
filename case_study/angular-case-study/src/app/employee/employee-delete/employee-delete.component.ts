@@ -7,7 +7,8 @@ import {EmployeeService} from '../../service/employee.service';
 import {PositionService} from '../../service/position.service';
 import {EducationDegreeService} from '../../service/education-degree.service';
 import {DivisionService} from '../../service/division.service';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {EmployeeEditComponent} from '../employee-edit/employee-edit.component';
 
 @Component({
   selector: 'app-employee-delete',
@@ -38,7 +39,8 @@ export class EmployeeDeleteComponent implements OnInit {
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
               private divisionService: DivisionService,
-              @Inject(MAT_DIALOG_DATA) id: string) {
+              @Inject(MAT_DIALOG_DATA) id: string,
+              private dialog: MatDialogRef<EmployeeEditComponent>) {
     this.id = id;
     this.getEmployee(id);
   }
@@ -69,6 +71,7 @@ export class EmployeeDeleteComponent implements OnInit {
 
   deleteEmployee(id: string) {
     this.employeeService.delete(id).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

@@ -4,7 +4,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer-edit',
@@ -31,7 +31,8 @@ export class CustomerEditComponent implements OnInit {
 
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
-              @Inject(MAT_DIALOG_DATA) id: string) {
+              @Inject(MAT_DIALOG_DATA) id: string,
+              private dialog: MatDialogRef<CustomerEditComponent>) {
     this.id = id;
     this.getCustomer(id);
   }
@@ -53,6 +54,7 @@ export class CustomerEditComponent implements OnInit {
   updateCustomer(id: string) {
     const customer = this.customerForm.value;
     this.customerService.update(id, customer).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

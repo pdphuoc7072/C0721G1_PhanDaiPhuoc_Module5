@@ -9,6 +9,7 @@ import {EducationDegreeService} from '../../service/education-degree.service';
 import {DivisionService} from '../../service/division.service';
 import {Router} from '@angular/router';
 import {gte} from '../../util/gte.validator';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-create',
@@ -40,7 +41,8 @@ export class EmployeeCreateComponent implements OnInit {
   constructor(private employeeService: EmployeeService,
               private positionService: PositionService,
               private educationDegreeService: EducationDegreeService,
-              private divisionService: DivisionService) {
+              private divisionService: DivisionService,
+              private dialog: MatDialogRef<EmployeeCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -52,6 +54,7 @@ export class EmployeeCreateComponent implements OnInit {
   saveEmployee() {
     const employee = this.employeeForm.value;
     this.employeeService.save(employee).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });

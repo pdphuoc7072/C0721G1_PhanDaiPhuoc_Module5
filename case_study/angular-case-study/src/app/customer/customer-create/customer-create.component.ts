@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer-create',
@@ -29,7 +30,8 @@ export class CustomerCreateComponent implements OnInit {
   customerTypeList: CustomerType[] = [];
 
   constructor(private customerService: CustomerService,
-              private customerTypeService: CustomerTypeService) {
+              private customerTypeService: CustomerTypeService,
+              private dialog: MatDialogRef<CustomerCreateComponent>) {
   }
 
   ngOnInit(): void {
@@ -39,6 +41,7 @@ export class CustomerCreateComponent implements OnInit {
   saveCustomer() {
     const customer = this.customerForm.value;
     this.customerService.save(customer).subscribe(() => {
+      this.dialog.close();
     }, error => {
       console.log(error);
     });
