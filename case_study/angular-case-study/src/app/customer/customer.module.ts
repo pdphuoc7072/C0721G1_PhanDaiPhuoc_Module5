@@ -9,6 +9,7 @@ import { CustomerDeleteComponent } from './customer-delete/customer-delete.compo
 import {ReactiveFormsModule} from '@angular/forms';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatDialogModule} from '@angular/material/dialog';
         CommonModule,
         CustomerRoutingModule,
         ReactiveFormsModule,
-        MatDialogModule
+        MatDialogModule,
+        NgxPaginationModule
     ]
 })
 export class CustomerModule { }

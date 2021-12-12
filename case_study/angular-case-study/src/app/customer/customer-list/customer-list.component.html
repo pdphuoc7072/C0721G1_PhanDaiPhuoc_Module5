@@ -19,7 +19,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let customer of customerList; index as i">
+  <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
     <th>{{i + 1}}</th>
     <td>{{customer.id}}</td>
     <td>{{customer.name}}</td>
@@ -49,3 +49,4 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="p = $event" style="float: right"></pagination-controls>

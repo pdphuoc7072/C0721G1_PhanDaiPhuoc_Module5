@@ -10,6 +10,7 @@ import { ContractDeleteComponent } from './contract-delete/contract-delete.compo
 import { ContractDetailsComponent } from './contract-details/contract-details.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatDialogModule} from '@angular/material/dialog';
         ReactiveFormsModule,
         MatButtonModule,
         MatDialogModule,
-        FormsModule
+        FormsModule,
+        NgxPaginationModule
     ]
 })
 export class ContractModule { }

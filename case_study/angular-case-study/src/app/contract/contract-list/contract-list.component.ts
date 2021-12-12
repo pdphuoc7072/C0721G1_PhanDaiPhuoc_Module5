@@ -16,6 +16,8 @@ export class ContractListComponent implements OnInit {
 
   contractList: Contract[] = [];
 
+  p = 1;
+
   constructor(private contractService: ContractService,
               public matDialog: MatDialog) {
   }

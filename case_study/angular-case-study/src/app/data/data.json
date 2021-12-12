@@ -89,7 +89,7 @@
       "name": "Nguyễn Tiến Dũng",
       "dateOfBirth": "1986-03-01",
       "idCard": "201136019",
-      "salary": "30000000",
+      "salary": "31000000",
       "phone": "0905163149",
       "email": "fgy2347@gmail.com",
       "address": "Đà Nẵng",
@@ -132,7 +132,7 @@
       "id": "NV-0005",
       "name": "Trương Việt Hoàng",
       "dateOfBirth": "1988-09-01",
-      "idCard": "201136009",
+      "idCard": "201136000",
       "salary": "20000000",
       "phone": "0917179310",
       "email": "hjkop90@yahoo.com",
@@ -192,6 +192,28 @@
       "division": {
         "name": "Hành chính",
         "id": 2
+      }
+    },
+    {
+      "id": "NV-0009",
+      "name": "Nguyễn Thị Thúy",
+      "dateOfBirth": "1992-08-07",
+      "idCard": "202136479",
+      "salary": "11000000",
+      "phone": "0917013649",
+      "email": "bnhty67@yahoo.com",
+      "address": "Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "educationDegree": {
+        "name": "Đại học",
+        "id": 3
+      },
+      "division": {
+        "name": "Sale - Marketing",
+        "id": 1
       }
     }
   ],
@@ -286,6 +308,48 @@
       "customerType": {
         "name": "Gold",
         "id": 3
+      }
+    },
+    {
+      "id": "KH-0007",
+      "name": "Phan Văn Khải",
+      "dateOfBirth": "1994-06-03",
+      "gender": "0",
+      "idCard": "200149364",
+      "phone": "0908143256",
+      "email": "ghy789@yahoo.com",
+      "address": "Quảng Nam",
+      "customerType": {
+        "name": "Gold",
+        "id": 3
+      }
+    },
+    {
+      "id": "KH-0008",
+      "name": "Nguyễn Tấn Đạt",
+      "dateOfBirth": "1988-04-06",
+      "gender": "0",
+      "idCard": "200136009",
+      "phone": "0907143658",
+      "email": "ghyu89045@gmail.com",
+      "address": "Quảng Nam",
+      "customerType": {
+        "name": "Platinium",
+        "id": 2
+      }
+    },
+    {
+      "id": "KH-0009",
+      "name": "Nguyễn Thị Thu Thảo",
+      "dateOfBirth": "1992-05-05",
+      "gender": "1",
+      "idCard": "200136000",
+      "phone": "0907143008",
+      "email": "adrt56@yahoo.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "name": "Silver",
+        "id": 4
       }
     }
   ],
@@ -823,6 +887,63 @@
         }
       },
       "id": 7
+    },
+    {
+      "id": 8,
+      "startDate": "2021-12-31",
+      "endDate": "2022-01-04",
+      "deposit": "7500000",
+      "total": "15200000",
+      "employee": {
+        "id": "NV-0006",
+        "name": "Phạm Minh Chính",
+        "dateOfBirth": "1976-09-03",
+        "idCard": "201436974",
+        "salary": "30000000",
+        "phone": "0908147369",
+        "email": "dghu78@gmail.com",
+        "address": "Tp. HCM",
+        "position": {
+          "name": "Chuyên viên",
+          "id": 3
+        },
+        "educationDegree": {
+          "name": "Đại học",
+          "id": 3
+        },
+        "division": {
+          "name": "Sale - Marketing",
+          "id": 1
+        }
+      },
+      "customer": {
+        "id": "KH-0007",
+        "name": "Phan Văn Khải",
+        "dateOfBirth": "1994-06-03",
+        "gender": "0",
+        "idCard": "200149364",
+        "phone": "0908143256",
+        "email": "ghy789@yahoo.com",
+        "address": "Quảng Nam",
+        "customerType": {
+          "name": "Gold",
+          "id": 3
+        }
+      },
+      "services": {
+        "id": "DV-0007",
+        "name": "House 3",
+        "area": "240",
+        "floor": "2",
+        "maxPeople": "6",
+        "cost": "3900000",
+        "status": "Còn phòng",
+        "rentType": {
+          "name": "Ngày",
+          "cost": "4000000",
+          "id": 3
+        }
+      }
     }
   ],
   "attachServiceList": [

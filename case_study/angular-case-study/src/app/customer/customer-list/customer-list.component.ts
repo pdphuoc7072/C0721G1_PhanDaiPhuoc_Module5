@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Customer} from '../../model/customer';
 import {CustomerService} from '../../service/customer.service';
 import {MatDialog} from '@angular/material/dialog';
@@ -15,6 +15,8 @@ import {CustomerDetailsComponent} from '../customer-details/customer-details.com
 export class CustomerListComponent implements OnInit {
 
   customerList: Customer[] = [];
+
+  p = 1;
 
   constructor(private customerService: CustomerService,
               private matDialog: MatDialog) {
