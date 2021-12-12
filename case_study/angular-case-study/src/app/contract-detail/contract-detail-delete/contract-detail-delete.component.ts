@@ -1,12 +1,10 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {gte} from '../../util/gte.validator';
+import {FormControl, FormGroup} from '@angular/forms';
 import {Contract} from '../../model/contract';
 import {AttachService} from '../../model/attach-service';
 import {ContractDetailService} from '../../service/contract-detail.service';
 import {ContractService} from '../../service/contract.service';
 import {AttachServiceService} from '../../service/attach-service.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {ConfirmDeleteDialogComponent} from '../../confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 

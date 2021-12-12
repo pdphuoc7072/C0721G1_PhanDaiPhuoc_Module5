@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {PositionService} from '../../service/position.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {EducationDegreeService} from '../../service/education-degree.service';
 

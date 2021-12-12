@@ -1,6 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {RentType} from '../../model/rent-type';
 import {ServicesService} from '../../service/services.service';
 import {RentTypeService} from '../../service/rent-type.service';

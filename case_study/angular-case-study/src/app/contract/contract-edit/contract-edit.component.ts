@@ -8,7 +8,6 @@ import {ContractService} from '../../service/contract.service';
 import {EmployeeService} from '../../service/employee.service';
 import {ServicesService} from '../../service/services.service';
 import {CustomerService} from '../../service/customer.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({

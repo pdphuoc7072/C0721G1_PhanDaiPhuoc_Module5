@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
 import {gte} from '../../util/gte.validator';
 import {RentType} from '../../model/rent-type';
 import {ServicesService} from '../../service/services.service';

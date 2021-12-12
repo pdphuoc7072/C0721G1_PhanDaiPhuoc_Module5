@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, DoCheck, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Services} from '../../model/services';
 import {ServicesService} from '../../service/services.service';
 import {MatDialog} from '@angular/material/dialog';

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
 import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';

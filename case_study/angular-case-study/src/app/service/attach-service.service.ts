@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Contract} from '../model/contract';
 import {AttachService} from '../model/attach-service';
 
 const API_URL = `${environment.apiUrl}`;

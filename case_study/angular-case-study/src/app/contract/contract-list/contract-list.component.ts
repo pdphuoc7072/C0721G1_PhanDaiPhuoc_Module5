@@ -1,4 +1,4 @@
-import {Component, DoCheck, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Contract} from '../../model/contract';
 import {ContractService} from '../../service/contract.service';
 import {MatDialog} from '@angular/material/dialog';

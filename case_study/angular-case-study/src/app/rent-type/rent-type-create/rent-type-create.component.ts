@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {PositionService} from '../../service/position.service';
 import {Router} from '@angular/router';
 import {RentTypeService} from '../../service/rent-type.service';
 

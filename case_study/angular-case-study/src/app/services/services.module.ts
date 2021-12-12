@@ -9,10 +9,11 @@ import { ServicesEditComponent } from './services-edit/services-edit.component';
 import { ServicesDeleteComponent } from './services-delete/services-delete.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {ServicesDetailsComponent} from './services-details/services-details.component';
 
 
 @NgModule({
-  declarations: [ServicesListComponent, ServicesCreateComponent, ServicesEditComponent, ServicesDeleteComponent],
+  declarations: [ServicesListComponent, ServicesCreateComponent, ServicesEditComponent, ServicesDeleteComponent, ServicesDetailsComponent],
   imports: [
     CommonModule,
     ServicesRoutingModule,

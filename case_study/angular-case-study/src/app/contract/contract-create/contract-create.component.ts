@@ -1,9 +1,6 @@
 import {Component, DoCheck, OnChanges, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
-import {CustomerTypeService} from '../../service/customer-type.service';
-import {Router} from '@angular/router';
 import {gte} from '../../util/gte.validator';
 import {Customer} from '../../model/customer';
 import {Employee} from '../../model/employee';

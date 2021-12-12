@@ -1,9 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {CustomerType} from '../../model/customer-type';
 import {CustomerService} from '../../service/customer.service';
 import {CustomerTypeService} from '../../service/customer-type.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {ConfirmDeleteDialogComponent} from '../../confirm-dialog/confirm-delete-dialog/confirm-delete-dialog.component';
 

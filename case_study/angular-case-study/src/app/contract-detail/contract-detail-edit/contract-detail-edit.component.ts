@@ -6,7 +6,6 @@ import {AttachService} from '../../model/attach-service';
 import {ContractDetailService} from '../../service/contract-detail.service';
 import {ContractService} from '../../service/contract.service';
 import {AttachServiceService} from '../../service/attach-service.service';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({

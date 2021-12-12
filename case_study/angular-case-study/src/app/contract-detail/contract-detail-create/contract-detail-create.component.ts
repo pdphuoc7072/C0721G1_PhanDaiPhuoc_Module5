@@ -4,7 +4,6 @@ import {gte} from '../../util/gte.validator';
 import {ContractDetailService} from '../../service/contract-detail.service';
 import {ContractService} from '../../service/contract.service';
 import {AttachServiceService} from '../../service/attach-service.service';
-import {Router} from '@angular/router';
 import {Contract} from '../../model/contract';
 import {AttachService} from '../../model/attach-service';
 import {MatDialogRef} from '@angular/material/dialog';
