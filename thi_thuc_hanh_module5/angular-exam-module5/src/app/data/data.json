@@ -1,0 +1,80 @@
+{
+  "cityList": [
+    {
+      "id": 1,
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "name": "Huế"
+    },
+    {
+      "id": 3,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 4,
+      "name": "Quảng Bình"
+    },
+    {
+      "id": 5,
+      "name": "Hà Tĩnh"
+    },
+    {
+      "id": 6,
+      "name": "Nghệ An"
+    },
+    {
+      "id": 7,
+      "name": "Bình Định"
+    },
+    {
+      "id": 8,
+      "name": "Khánh Hòa"
+    },
+    {
+      "id": 9,
+      "name": "Quảng Ngãi"
+    },
+    {
+      "id": 10,
+      "name": "Quảng Nam"
+    }
+  ],
+  "carList": [
+    {
+      "id": 1245,
+      "typeOfCar": "Ghế ngồi",
+      "nameOfCar": "Tuấn Kiệt",
+      "departureOfCity": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "destinationOfCity": {
+        "id": 5,
+        "name": "Hà Tĩnh"
+      },
+      "phone": "0931113445",
+      "email": "123@123.com",
+      "departureOfTime": "06:00",
+      "destinationOfTime": "10:00"
+    },
+    {
+      "id": 2345,
+      "typeOfCar": "Ghế ngồi",
+      "nameOfCar": "Bảo Hân",
+      "departureOfCity": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "destinationOfCity": {
+        "id": 5,
+        "name": "Hà Tĩnh"
+      },
+      "phone": "0973146913",
+      "email": "juiol456@yahoo.com",
+      "departureOfTime": "11:00",
+      "destinationOfTime": "15:00"
+    }
+  ]
+}

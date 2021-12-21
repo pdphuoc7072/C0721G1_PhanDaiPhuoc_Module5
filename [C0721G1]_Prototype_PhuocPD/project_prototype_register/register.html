@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto%7CVarela+Round"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"
+    ></script>
+    <link
+            rel="stylesheet prefetch"
+            href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <style>
+        li a{
+            text-align: center;
+            align-items: center;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .navLi {
+            align-items: center;
+            margin-left: 30px;
+        }
+        .navLi:hover{
+            transform:scale(1.3);
+            transition: 0.7s;
+        }
+
+        body {
+            font-family: Lucida Grande;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<!--  /* HEADER */-->
+<div class="container-fluid">
+    <div class="row" style="background-color: whitesmoke; padding: 15px">
+        <div class="col-1"></div>
+        <div class="col-2">(+84)913379559</div>
+        <div class="col-3">Email: info@codegym.vn</div>
+        <div class="col-3"></div>
+        <div class="col-3">
+            <input type="text" placeholder="Search...." />
+        </div>
+        <hr />
+    </div>
+    <div class="row" style="background-color: ghostwhite;">
+        <div class="col-1"></div>
+        <div class="col-2"><img src="https://i.imgur.com/Cn2aedI.png" height="72" width="191"></div>
+        <div class="col-6" style="padding: 15px">
+            <marquee style="font-size: x-large; color: #058af0; font-family: 'Lucida Grande';">
+                CÙNG TẠO CƠ HỘI THÀNH CÔNG - HƯỚNG TỚI SỨC KHỎE CỘNG ĐỒNG</marquee
+            >
+        </div>
+        <div class="col-3" style="padding: 15px">
+            <button class="btn btn-primary btn-primary">
+                <i class="fas fa-mobile-alt"> 0913379559</i>
+            </button>
+            <button class="btn  btn-primary"><i  class="fas fa-shopping-cart"></i></button>
+
+        </div>
+    </div>
+    <div class="row" style="background-color: #058af0;">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #058af0;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active navLi">
+                            <a class="nav-link text-white" href="#">TRANG CHỦ
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item navLi ">
+                            <a class="nav-link text-white" href="#">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item dropdown navLi">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            >
+                                SẢN PHẨM
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-white" href="#">Action</a>
+                                <a class="dropdown-item text-white" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-white" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item navLi">
+                            <a class="nav-link text-white " href="#"><span>CHỨNG CHỈ CHẤT
+                            LƯỢNG</span></a>
+                        </li>
+                        <li class="nav-item navLi" href="#">
+                            <a class="nav-link text-white">HOẠT ĐỘNG CÔNG
+                                TY</a>
+                        </li>
+                        <li class="nav-item navLi">
+                            <a class="nav-link text-white" href="#">ĐỐI TÁC</a>
+                        </li>
+                        <li class="nav-item navLi">
+                            <a class="nav-link text-white" href="#">LIÊN HỆ</a>
+                        </li>
+                        <li class="nav-item navLi">
+                            <a class="nav-link text-white" href="#">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-image: url(https://hoaidoan.vn/wp-content/uploads/2021/03/background-dep-5.png); background-size: cover">
+    <div class="row">
+        <div class="col-2">
+            <div class="nav-side-menu" style="background-image: url(bg_1.jpg)">
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                <div class="menu-list">
+
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                            </a>
+                        </li>
+
+<!--                        <li  data-toggle="collapse" data-target="#products" class="collapsed active">-->
+<!--                            <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>-->
+<!--                        </li>-->
+<!--                        <ul class="sub-menu collapse" id="products">-->
+<!--                            <li class="active"><a href="#">CSS3 Animation</a></li>-->
+<!--                            <li><a href="#">General</a></li>-->
+<!--                            <li><a href="#">Buttons</a></li>-->
+<!--                            <li><a href="#">Tabs & Accordions</a></li>-->
+<!--                            <li><a href="#">Typography</a></li>-->
+<!--                            <li><a href="#">FontAwesome</a></li>-->
+<!--                            <li><a href="#">Slider</a></li>-->
+<!--                            <li><a href="#">Panels</a></li>-->
+<!--                            <li><a href="#">Widgets</a></li>-->
+<!--                            <li><a href="#">Bootstrap Model</a></li>-->
+<!--                        </ul>-->
+
+
+                        <li data-toggle="collapse" data-target="#service" class="collapsed">
+                            <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="service">
+                            <li>New Service 1</li>
+                            <li>New Service 2</li>
+                            <li>New Service 3</li>
+                        </ul>
+
+
+                        <li data-toggle="collapse" data-target="#new" class="collapsed">
+                            <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="new">
+                            <li>New New 1</li>
+                            <li>New New 2</li>
+                            <li>New New 3</li>
+                        </ul>
+
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-lg"></i> Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users fa-lg"></i> Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <h2 class="text-center mb-3">Tạo mới tài khoản</h2>
+                        <form action="#" method="post">
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="employeeId" class="form-label">Mã nhân viên<span
+                                                style="color: red">(*)</span></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" id="employeeId"
+                                               aria-describedby="employeeIdError">
+                                        <div id="employeeIdError" class="form-text text-danger">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="username" class="form-label">Tên tài khoản<span
+                                                style="color: red">(*)</span></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" id="username"
+                                               aria-describedby="usernameError">
+                                        <div id="usernameError" class="form-text text-danger">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="password" class="form-label">Mật khẩu<span style="color: red">(*)</span></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="password" class="form-control" id="password"
+                                               aria-describedby="passwordError">
+                                        <div id="passwordError" class="form-text text-danger">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="role" class="form-label">Quyền<span style="color: red">(*)</span></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select class="custom-select" id="role" required>
+                                            <option selected value="">Chọn quyền</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-success">Đăng ký</button>
+                                        <button type="submit" class="btn btn-secondary">Trở về</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--      /* FOOTER */-->
+<div class="row" id="footer" style="background-color: #058af0;">
+    <div class="col-4" style="text-align: justify">
+        <span style="font-weight: bold; color: white;">CTY TNHH TBYT - DƯỢC CODEGYM</span>
+        <br>
+        <br>
+        <span style="color: white">Chúng tôi tin tưởng rằng, với năng lực, sự năng động, sáng tạo, trách nhiệm cao của đội ngũ cán bộ ở đây. Công ty sẽ luôn đáp ứng được các hợp
+    đồng thương mại trong nước và xuất khẩu ra thị trường thế giới, đáp ứng các hợp đồng dịch vụ kỹ thuật y tế đối khách hàng (cơ sở y tế công lập và tư nhân, trong nước và nước ngoài).
+  </span></div>
+    <div class="col-4" style="text-align: justify;color: white">
+        <span style="font-weight: bold;">LIÊN HỆ:</span>
+        <br>
+        <br>
+        <span style="font-weight: bold;">Trụ sở:</span>
+        <span>Tầng 3, Tòa nhà Đức Ân, Số 01, Đường Trần Hưng Học, Phường Lê Mao, TP. Vinh, Nghệ An, Việt Nam</span>
+        <br>
+        <span style="font-weight: bold;">Chi nhánh 1:</span>
+        <span>Số 5, - Tân Phú - Đại Lộ Lê Nin - Thành Phố Vinh - Nghệ An</span>
+        <br>
+        <span style="font-weight: bold;">Chi nhánh 2:</span>
+        <span>402 Tòa nhà CT2 Vimeco Nguyễn Chánh, Trung Hòa, Cầu Giấy, TP. Hà Nội, Việt Nam</span>
+        <br>
+        <span style="font-weight: bold;">Chi nhánh 3:</span>
+        <span>618A Trần Đại NGhĩa, Phường Tân Tạo A, Quận Bình Tân, TP. Hồ Chí Minh, Việt Nam</span>
+        <br>
+        <span style="font-weight: bold;">Hotline:</span>
+        <span>0913379559</span>
+        <br>
+        <span style="font-weight: bold;">Điện thoại:</span>
+        <span>023.88.98.58.58</span>
+        <br>
+        <span style="font-weight: bold;">Email:</span>
+        <span>info@codegym.vn</span>
+    </div>
+    <div class="col-4" style="text-align: justify;">
+        <span style="font-weight: bold;color: white ">DANH MỤC SẢN PHẨM</span>
+        <br>
+        <br>
+        <span><a style="color: white" href="#">Sản phẩm chăm sóc sức khỏe</a></span>
+        <br>
+        <span><a style="color: white" href="#">Thiết bị bảo hộ y tế</a></span>
+        <br>
+        <span><a style="color: white" href="#">Thiết bị y tế & vật tư tiêu hao</a></span>
+    </div>
+</div>
+<div class="row" id="copyright">
+    <div class="col-4" style="text-align: justify">
+        <span>COPYRIGHT<i class="fa fa-copyright" aria-hidden="true">2021 CODEGYM.VN</i></span></div>
+    <div class="col-4"></div>
+    <div class="col-4">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.google.com/"><i class="fab fa-google-plus-g"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+    </div>
+</div>
+</body>
+</html>

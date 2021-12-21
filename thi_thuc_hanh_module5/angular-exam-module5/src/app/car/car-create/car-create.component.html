@@ -1,0 +1,147 @@
+<h2 mat-dialog-title>Create employee</h2>
+<div mat-dialog-content>
+  <form [formGroup]="carForm" (ngSubmit)="saveCar()" novalidate>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="id" class="form-label">Số xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="id" formControlName="id">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="typeOfCar" class="form-label">Loại xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="typeOfCar" formControlName="typeOfCar" aria-describedby="typeOfCarError">
+        <div id="typeOfCarError" class="form-text text-danger" *ngIf="!typeOfCar.valid && (typeOfCar.dirty || typeOfCar.touched)">
+          <div [hidden]="!typeOfCar.errors.required">
+            Loại xe không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="nameOfCar" class="form-label">Tên nhà xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="nameOfCar" formControlName="nameOfCar" aria-describedby="nameOfCarError">
+        <div id="nameOfCarError" class="form-text text-danger" *ngIf="!nameOfCar.valid && (nameOfCar.dirty || nameOfCar.touched)">
+          <div [hidden]="!nameOfCar.errors.required">
+            Tên nhà xe không được để trống!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="departureOfCity" class="form-label">Điểm đi</label>
+      </div>
+      <div class="col-8">
+        <select id="departureOfCity" name="departureOfCity" formControlName="departureOfCity"
+                aria-describedby="departureOfCityError">
+          <option value="">---Select---</option>
+          <option *ngFor="let city of cities" [ngValue]="city">{{city.name}}</option>
+        </select>
+        <div id="departureOfCityError" class="form-text text-danger"
+             *ngIf="!departureOfCity.valid && (departureOfCity.dirty || departureOfCity.touched)">
+          Điểm đi không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="destinationOfCity" class="form-label">Điểm đến</label>
+      </div>
+      <div class="col-8">
+        <select id="destinationOfCity" name="destinationOfCity" formControlName="destinationOfCity"
+                aria-describedby="destinationOfCityError">
+          <option value="">---Select---</option>
+          <option *ngFor="let city of cities" [ngValue]="city">{{city.name}}</option>
+        </select>
+        <div id="destinationOfCityError" class="form-text text-danger"
+             *ngIf="!destinationOfCity.valid && (destinationOfCity.dirty || destinationOfCity.touched)">
+          Điểm đến không được để trống
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="phone" class="form-label">Số điện thoại</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="phone" formControlName="phone" aria-describedby="phoneError">
+        <div id="phoneError" class="form-text text-danger" *ngIf="!phone.valid && (phone.dirty || phone.touched)">
+          <div [hidden]="!phone.errors.required">
+            Số điện thoại không được để trống!!!
+          </div>
+          <div [hidden]="!phone.errors.pattern">
+            Số điện thoại phải bắt đầu bằng 090 hoặc 093 hoặc 097 và có 10 số
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="email" class="form-label">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="email" formControlName="email" aria-describedby="emailError">
+        <div id="emailError" class="form-text text-danger" *ngIf="!email.valid && (email.dirty || email.touched)">
+          <div [hidden]="!email.errors.required">
+            Email không được để trống!!!
+          </div>
+          <div [hidden]="!email.errors.pattern">
+            Email phải đúng định dạng!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="departureOfTime" class="form-label">Giờ đi</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="departureOfTime" formControlName="departureOfTime" aria-describedby="departureOfTimeError">
+        <div id="departureOfTimeError" class="form-text text-danger" *ngIf="!departureOfTime.valid && (departureOfTime.dirty || departureOfTime.touched)">
+          <div [hidden]="!departureOfTime.errors.required">
+            Giờ đi không được để trống!!!
+          </div>
+          <div [hidden]="!departureOfTime.errors.pattern">
+            Giờ đi phải đúng định dạng hh:mm!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="destinationOfTime" class="form-label">Giờ đến</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="destinationOfTime" formControlName="destinationOfTime" aria-describedby="destinationOfTimeError">
+        <div id="destinationOfTimeError" class="form-text text-danger" *ngIf="!destinationOfTime.valid && (destinationOfTime.dirty || destinationOfTime.touched)">
+          <div [hidden]="!destinationOfTime.errors.required">
+            Giờ đến không được để trống!!!
+          </div>
+          <div [hidden]="!destinationOfTime.errors.pattern">
+            Giờ đến phải đúng định dạng hh:mm!!!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" [disabled]="!carForm.valid">Create
+          </button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
+      </div>
+    </div>
+  </form>
+</div>
+
+

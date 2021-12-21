@@ -1,0 +1,91 @@
+<h2 mat-dialog-title>Xóa nhà xe</h2>
+<div mat-dialog-content>
+  <form [formGroup]="carForm">
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="id" class="form-label">Số xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="id" formControlName="id">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="typeOfCar" class="form-label">Loại xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="typeOfCar" formControlName="typeOfCar">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="nameOfCar" class="form-label">Tên nhà xe</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="nameOfCar" formControlName="nameOfCar">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="departureOfCity" class="form-label">Điểm đi</label>
+      </div>
+      <div class="col-8">
+        <select [compareWith]="compareCity" id="departureOfCity" name="departureOfCity" formControlName="departureOfCity">
+          <option *ngFor="let city of cityList" [ngValue]="city">{{city.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="destinationOfCity" class="form-label">Điểm đến</label>
+      </div>
+      <div class="col-8">
+        <select [compareWith]="compareCity" id="destinationOfCity" name="destinationOfCity" formControlName="destinationOfCity">
+          <option *ngFor="let city of cityList" [ngValue]="city">{{city.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="phone" class="form-label">Số điện thoại</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="phone" formControlName="phone">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="email" class="form-label">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="email" formControlName="email">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="departureOfTime" class="form-label">Giờ đi</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="departureOfTime" formControlName="departureOfTime">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4">
+        <label for="destinationOfTime" class="form-label">Giờ đến</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control" id="destinationOfTime" formControlName="destinationOfTime">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-4"></div>
+      <div class="col-8">
+        <mat-dialog-actions>
+          <button mat-button type="submit" class="btn btn-primary" (click)="deleteCar(id)">Delete</button>
+          <button mat-button mat-dialog-close class="btn btn-dark">Close</button>
+        </mat-dialog-actions>
+      </div>
+    </div>
+  </form>
+</div>
+

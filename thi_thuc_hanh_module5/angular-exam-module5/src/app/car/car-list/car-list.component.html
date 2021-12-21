@@ -1,0 +1,42 @@
+<h1>Danh sách các xe đăng ký ở bến xe XYZ</h1>
+<button mat-button (click)="openDialogCreate()" class="btn btn-primary">Create new employee</button>
+
+<table class="table table-hover table-striped mt-2">
+  <thead>
+  <tr>
+    <th scope="col">Số xe</th>
+    <th scope="col">Loại xe</th>
+    <th scope="col">Tên nhà xe</th>
+    <th scope="col">Điểm đi</th>
+    <th scope="col">Điểm đến</th>
+    <th scope="col">Số điện thoại</th>
+    <th scope="col">Email</th>
+    <th scope="col">Giờ đi</th>
+    <th scope="col">Giờ đến</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of cars">
+    <td>{{car.id}}</td>
+    <td>{{car.typeOfCar}}</td>
+    <td>{{car.nameOfCar}}</td>
+    <td>{{car.departureOfCity.name}}</td>
+    <td>{{car.destinationOfCity.name}}</td>
+    <td>{{car.phone}}</td>
+    <td>{{car.email}}</td>
+    <td>{{car.departureOfTime}}</td>
+    <td>{{car.destinationOfTime}}</td>
+    <td>
+      <button mat-button (click)="openDialogEdit(car.id)" class="btn btn-warning"><i class="fas fa-edit"></i>
+      </button>
+    </td>
+    <td>
+      <button mat-button (click)="openDialogDelete(car.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6c215d7-83cb-4b9b-ae44-7020261be430" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../angular_demo_jwt/angular-demo-jwt/src/app/helper/auth.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/common/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/config/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/config/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/dto/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/dto/MessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/dto/SignupRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/repository/IRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/service/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_jwt/src/main/java/com/codegym/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/controller/CarRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/controller/CityRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/model/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/repository/ICarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/repository/ICityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/service/ICarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/service/ICityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/service/impl/CarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi-thuc-hanh-module5/src/main/java/codegym/com/service/impl/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh_module5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thi_thuc_hanh_module5/angular-exam-module5/src/app/data/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/attach-service/attach-service-list/attach-service-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/attach-service/attach-service-list/attach-service-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/employee/employee-details/employee-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/employee/employee-details/employee-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/employee/employee.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study/angular-case-study/src/app/employee/employee.module.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="22WvDT3ZO7yY5tWcXK6PFlOO7cG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0721G1_PhanDaiPhuoc_Module5\project_prototype_login" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6c215d7-83cb-4b9b-ae44-7020261be430" name="Default Changelist" comment="" />
+      <created>1639966037663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639966037663</updated>
+      <workItem from="1639966038868" duration="4647000" />
+      <workItem from="1639974975203" duration="1113000" />
+      <workItem from="1639982104479" duration="6192000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1639992540856">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1639992540856" />
+    <state x="548" y="151" key="FileChooserDialogImpl" timestamp="1639966291525">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="548" y="151" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1639966291525" />
+  </component>
+</project>

@@ -21,7 +21,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   getEmployee(id: string) {
-    return this.employeeService.findById(id).subscribe(employee => {
+    this.employeeService.findById(id).subscribe(employee => {
       this.employee = employee;
     });
   }
