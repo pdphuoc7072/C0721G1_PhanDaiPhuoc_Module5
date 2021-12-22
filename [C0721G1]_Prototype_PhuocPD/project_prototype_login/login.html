@@ -36,22 +36,27 @@
             href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
     />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <link href="sidebar.css" rel="stylesheet" type="text/css">
     <style>
-        li a{
+        li a {
             text-align: center;
             align-items: center;
         }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         .navLi {
             align-items: center;
             margin-left: 30px;
         }
-        .navLi:hover{
-            transform:scale(1.3);
+
+        .navLi:hover {
+            transform: scale(1.3);
             transition: 0.7s;
         }
 
@@ -70,23 +75,24 @@
         <div class="col-3">Email: info@codegym.vn</div>
         <div class="col-3"></div>
         <div class="col-3">
-            <input type="text" placeholder="Search...." />
+            <input type="text" placeholder="Search...."/>
         </div>
-        <hr />
+        <hr/>
     </div>
     <div class="row" style="background-color: ghostwhite;">
         <div class="col-1"></div>
         <div class="col-2"><img src="https://i.imgur.com/Cn2aedI.png" height="72" width="191"></div>
         <div class="col-6" style="padding: 15px">
             <marquee style="font-size: x-large; color: #058af0; font-family: 'Lucida Grande';">
-                CÙNG TẠO CƠ HỘI THÀNH CÔNG - HƯỚNG TỚI SỨC KHỎE CỘNG ĐỒNG</marquee
+                CÙNG TẠO CƠ HỘI THÀNH CÔNG - HƯỚNG TỚI SỨC KHỎE CỘNG ĐỒNG
+            </marquee
             >
         </div>
         <div class="col-3" style="padding: 15px">
             <button class="btn btn-primary btn-primary">
                 <i class="fas fa-mobile-alt"> 0913379559</i>
             </button>
-            <button class="btn  btn-primary"><i  class="fas fa-shopping-cart"></i></button>
+            <button class="btn  btn-primary"><i class="fas fa-shopping-cart"></i></button>
 
         </div>
     </div>
@@ -144,52 +150,111 @@
     </div>
 </div>
 
-<div class="pt-5">
-    <h1 class="text-center"><img src="https://i.imgur.com/Cn2aedI.png" alt="" width="150" height="130"></h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 mx-auto">
-                <div class="card card-body">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="username">Tên đăng nhập<span style="color: red">(*)</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" id="username" name="username" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="d-flex flex-row align-items-center" for="password">Mật khẩu<span style="color: red">(*)</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                </div>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                            </div>
-                        </div>
-                        <div class="form-group mt-4 mb-4">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="remember-me" name="remember-me" data-parsley-multiple="remember-me">
-                                <label class="custom-control-label" for="remember-me"> Remember me </label>
-                            </div>
-                        </div>
-                        <div class="form-group pt-1">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <button class="btn btn-success btn-block" type="submit">Login</button>
-                                    <button class="btn btn-secondary btn-block" type="submit"> Cancel </button>
-                                </div>
-                            </div>
+<div class="container-fluid"
+     style="background-image: url(https://hoaidoan.vn/wp-content/uploads/2021/03/background-dep-5.png); background-size: cover">
+    <div class="row">
+        <div class="col-2">
+            <div class="nav-side-menu" style="background-image: url(bg_1.jpg)">
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                <div class="menu-list">
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <li data-toggle="collapse" data-target="#system" class="collapsed">
+                            <a href="#"><i class="fas fa-assistive-listening-systems"></i> Hệ thống <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="system">
+                            <li><a href="#">Tạo tài khoản</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Ngôn ngữ</a></li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#category" class="collapsed">
+                            <a href="#"><i class="fas fa-toolbox"></i> Danh mục <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="category">
+                            <li data-toggle="collapse" data-target="#information" class="collapsed">
+                                <a href="#"><i class="fas fa-info"></i> Quản lý thông tin <span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="information">
+                                <li><a href="#">Thông tin nhân viên</a></li>
+                                <li><a href="#">Thông tin khách hàng</a></li>
+                                <li><a href="#">Thông tin vật tư</a></li>
+                            </ul>
+                            <li data-toggle="collapse" data-target="#warehouse" class="collapsed">
+                                <a href="#"><i class="fas fa-warehouse"></i> Quản lý kho <span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="warehouse">
+                                <li><a href="#">Nhập kho</a></li>
+                                <li><a href="#">Xuất kho</a></li>
+                            </ul>
+                            <li data-toggle="collapse" data-target="#salary" class="collapsed">
+                                <a href="#"><i class="fas fa-money-check-alt"></i> Quản lý lương <span class="arrow"></span></a>
+                            </li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#statistical" class="collapsed">
+                            <a href="#"><i class="fas fa-toolbox"></i> Thống kê <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="statistical">
+                            <li><a href="#">Tài chính</a></li>
+                            <li><a href="#">Vật tư</a></li>
+                            <li><a href="#">Khách hàng tiềm năng</a></li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#support" class="collapsed">
+                            <a href="#"><i class="fas fa-question"></i> Trợ giúp <span class="arrow"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="pt-5">
+                <h1 class="text-center"><img src="C0721G1_LOGO.png" alt="" width="150" height="130"></h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 mx-auto">
+                            <div class="card card-body">
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label for="username">Tên đăng nhập<span style="color: red">(*)</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" id="username" name="username" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="d-flex flex-row align-items-center" for="password">Mật khẩu<span style="color: red">(*)</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                            </div>
+                                            <input type="password" class="form-control" id="password" name="password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-4 mb-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="remember-me" name="remember-me" data-parsley-multiple="remember-me">
+                                            <label class="custom-control-label" for="remember-me"> Remember me </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pt-1">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <button class="btn btn-success btn-block" type="submit">Login</button>
+                                                <button class="btn btn-secondary btn-block" type="submit"> Cancel </button>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!--      /* FOOTER */-->
 <div class="row" id="footer" style="background-color: #058af0;">
